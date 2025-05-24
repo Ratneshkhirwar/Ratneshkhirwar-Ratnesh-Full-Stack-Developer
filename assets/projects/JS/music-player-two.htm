@@ -1,0 +1,127 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Music Player</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <style>
+        body {
+            background-color: #282c34;
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center h-screen">
+
+    <div class="music-player bg-gray-800 p-6 rounded-lg shadow-lg w-96">
+        <h2 class="text-2xl text-center text-white mb-4">Music Player</h2>
+        <input type="file" id="fileInput" accept="audio/*" multiple
+            class="w-full bg-gray-700 text-white rounded p-2 mb-4 cursor-pointer">
+        <ul id="playlist" class="text-white mb-4"></ul>
+        <audio id="audioPlayer" class="hidden"></audio>
+        <div class="current-track text-center text-white mb-2"></div>
+        <div class="custom-controls flex justify-between bg-gray-700 p-2 rounded mt-4">
+            <button
+                class="prev-button bg-blue-600 text-white rounded px-4 py-2 transition duration-300 ease-in-out transform hover:bg-blue-500 hover:scale-105"
+                id="prevButton">Prev</button>
+            <button
+                class="play-button bg-blue-600 text-white rounded px-4 py-2 transition duration-300 ease-in-out transform hover:bg-blue-500 hover:scale-105"
+                id="playButton">Play</button>
+            <button
+                class="pause-button bg-red-600 text-white rounded px-4 py-2 transition duration-300 ease-in-out transform hover:bg-red-500 hover:scale-105"
+                id="pauseButton">Pause</button>
+            <button
+                class="next-button bg-blue-600 text-white rounded px-4 py-2 transition duration-300 ease-in-out transform hover:bg-blue-500 hover:scale-105"
+                id="nextButton">Next</button>
+        </div>
+        <div class="volume-control mt-4">
+            <label class="text-white">Volume:</label>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1"
+                class="w-full bg-gray-700 rounded cursor-pointer">
+        </div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playButton = document.getElementById('playButton');
+        const pauseButton = document.getElementById('pauseButton');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const volumeControl = document.getElementById('volumeControl');
+        const playlist = document.getElementById('playlist');
+        const currentTrackDisplay = document.querySelector('.current-track');
+
+        let files = [];
+        let currentTrack = 0;
+
+        fileInput.addEventListener('change', function (e) {
+            files = Array.from(e.target.files);
+            playlist.innerHTML = ''; // Clear the current playlist
+
+            files.forEach((file, index) => {
+                const li = document.createElement('li');
+                li.textContent = file.name;
+                li.className = 'cursor-pointer text-gray-300 hover:text-white';
+                li.addEventListener('click', () => playTrack(index));
+                playlist.appendChild(li);
+            });
+
+            if (files.length > 0) {
+                playTrack(0); // Play the first track
+            }
+        });
+
+        function playTrack(index) {
+            if (index < 0 || index >= files.length) return;
+            currentTrack = index;
+
+            const objectURL = URL.createObjectURL(files[currentTrack]);
+            audioPlayer.src = objectURL;
+            audioPlayer.play();
+            currentTrackDisplay.textContent = `Playing: ${files[currentTrack].name}`;
+
+            // Animate player
+            gsap.fromTo(".music-player", { scale: 0.8 }, { scale: 1, duration: 0.5 });
+        }
+
+        playButton.addEventListener('click', () => {
+            if (files.length > 0) {
+                audioPlayer.play();
+            }
+        });
+
+        pauseButton.addEventListener('click', () => {
+            audioPlayer.pause();
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentTrack > 0) {
+                playTrack(currentTrack - 1);
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentTrack < files.length - 1) {
+                playTrack(currentTrack + 1);
+            }
+        });
+
+        audioPlayer.addEventListener('ended', () => {
+            if (currentTrack < files.length - 1) {
+                playTrack(currentTrack + 1);
+            } else {
+                playTrack(0); // Loop back to the first track
+            }
+        });
+
+        volumeControl.addEventListener('input', (e) => {
+            audioPlayer.volume = e.target.value; // Adjust volume based on slider
+        });
+    </script>
+</body>
+
+</html>

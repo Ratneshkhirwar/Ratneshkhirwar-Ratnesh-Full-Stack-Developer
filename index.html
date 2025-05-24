@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fjalla+One&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Julee&family=Monoton&family=Questrial&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio | Ratnesh Khirwar</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo"></div>
+                <div class="name">Ratnesh Khirwar || Portfolio</div>
+            </div>
+            <div class="heading">Full Stack Developer</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="landing-page">
+        <div class="heading">
+            <p>FULL STACK DEVELOPER</p>
+            <span>
+                <h1>RATNESH KHIRWAR</h1>
+            </span>
+            <div>
+                <hr />
+            </div>
+        </div>
+        <div class="paragraph">
+            I am a skilled developer with expertise in web design, React JS, and GSAP animations. With a strong
+            foundation in both front-end and back-end technologies, I am proficient in creating interactive and dynamic
+            user experiences. My ability to combine design sensibility with technical skills allows me to deliver
+            innovative solutions for various projects.
+            <button class="cta-button">View Projects</button>
+        </div>
+    </section>
+    <section class="experience" id="experience">
+        <div class="main-text">
+            <div class="line"><span>1+</span> YEARS OF</div>
+            <div>EXPERIENCE IN</div>
+            <div>WEB DEVELOPMENT</div>
+        </div>
+
+        <div class="experience-container">
+            <button class="experience-item-one">Wix Studio</button>
+            <button class="experience-item-two">Visual Studio Code</button>
+            <button class="experience-item-thr">Blender</button>
+            <button class="experience-item-fou">Xcode</button>
+            <button class="experience-item-fiv">Powershell</button>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="content" id="about">
+            <div class="image">
+                <img src="./assets/images/MicrosoftTeams-image.png" alt="">
+            </div>
+            <div class="description">
+                <div class="heading">About Me</div>
+                <div class="subheading">
+                    Turning Ideas Into Experiences
+                    <hr />
+                </div>
+                <div class="paragraph">
+                    I’m a passionate full-stack developer who loves building modern, intuitive web applications. From
+                    crafting smooth UI animations with GSAP to architecting clean backend logic in Node.js, I turn ideas
+                    into fast, real-world digital experiences. Whether designing pixel-perfect frontends or scalable
+                    systems, I strive to write code that solves real problems and delights users.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="main-heading">My Projects</div>
+        <div class="recent-projects">
+            <div class="heading">Live Projects
+                <hr />
+            </div>
+            <div class="projects-container">
+                <a href="./assets/projects/Live-Projects/burger.html">
+                    <div class="project">
+                        <img src="./assets/images/burger-image.png" alt="">
+                        <div class="overlay">Burger Haven</div>
+                    </div>
+                </a>
+                <a href="./assets/projects/Live-Projects/rai-enterprises.html">
+                    <div class="project">
+                        <img src="./assets/images/p+image.png" alt="">
+                        <div class="overlay">Rai Enterprises</div>
+                    </div>
+                </a>
+            </div>
+            <div class="text-para">
+                I create projects that blend innovation, functionality, and user-focused design. Whether it’s a simple
+                tool or a complex system, my goal is always the same — to build something that makes life easier, more
+                enjoyable, and truly meaningful for the people who use it.
+            </div>
+        </div>
+        <div class="other-projects">
+            <div class="heading">Recent Works*</div>
+            <div class="project-toggle-btn">
+                <button class="active" id="all" onclick="filterProjects('all')">All</button>
+                <button id="html-css" onclick="filterProjects('html-css')">HTML,CSS</button>
+                <button id="js" onclick="filterProjects('js')">JS</button>
+                <button id="react" onclick="filterProjects('react')">React</button>
+            </div>
+            <div class="projects-container">
+                <a href="./assets/projects/HTML,CSS/resume.html">
+                    <div class="card html-css">
+                        <div class="card-image">
+                            <img
+                                src="https://t3.ftcdn.net/jpg/04/75/01/06/360_F_475010683_QcMoX9EuZkjVToNNtXCDbejMo4tIj06i.jpg">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">My Resume<span>🡢</span></div>
+                            <p>My personal resume highlighting skills, education, and experience.</p>
+                            <h3><span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 Logo" width="25" />
+                                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 Logo" width="25" />
+                                </span>
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="./assets/projects/HTML,CSS/e-commerce-dashboard.html">
+                    <div class="card html-css">
+                        <div class="card-image">
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/019/507/947/small_2x/shop-sale-shopping-bag-logo-design-symbo-vector.jpg"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">E-commerce dashboard<span>🡢</span></div>
+                            <p>It is a basic dashboard made as an E-commerce website for practise.</p>
+                            <h3><span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 Logo" width="25" />
+                                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 Logo" width="25" />
+                                </span>
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="./assets/projects/HTML,CSS/food-dashboard.html">
+                    <div class="card html-css">
+                        <div class="card-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThCagRLYkLeTBEd0qc-6FLb6lnyxJXaBw_Fw&s"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">Food Dashboard<span>🡢</span></div>
+                            <p>It is a basic dashboard made as an E-commerce website for practise.</p>
+                            <h3><span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 Logo" width="25" />
+                                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 Logo" width="25" />
+                                </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./assets/projects/HTML,CSS/Camera.html">
+                    <div class="card html-css">
+                        <div class="card-image">
+                            <img src="https://t4.ftcdn.net/jpg/02/93/11/63/360_F_293116342_aUNILvn6mvYzXFnQ09Jhou2h6caqA1pa.jpg"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">Photography Portfolio<span>🡢</span></div>
+                            <p>This is a photography portfolio showcasing various works.</p>
+                            <h3><span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 Logo" width="25" />
+                                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 Logo" width="25" />
+                                </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./assets/projects/JS/keyboard.html">
+                    <div class="card js">
+                        <div class="card-image">
+                            <img src="./assets/images/keyboardlogo.png"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">Keyboard<span>🡢</span></div>
+                            <p>It is a simple keyboard interface built with HTML, CSS, and JavaScript.</p>
+                            <h3><span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 Logo" width="25" />
+                                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 Logo" width="25" />
+                                    <img class="js" src="https://cdn.simpleicons.org/javascript/F7DF1E"
+                                        alt="JavaScript Logo" width="25" />
+                                </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./assets/projects/JS/brick-adder.html">
+                    <div class="card js">
+                        <div class="card-image">
+                            <img src="https://as2.ftcdn.net/jpg/01/67/05/73/1000_F_167057364_WzO8CLrIGZpvOkekxkusuHC9vrzApyvB.jpg"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">Brick Adder<span>🡢</span></div>
+                            <p>Click to Know.😀</p>
+                            <h3><span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 Logo" width="25" />
+                                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 Logo" width="25" />
+                                    <img class="js" src="https://cdn.simpleicons.org/javascript/F7DF1E"
+                                        alt="JavaScript Logo" width="25" />
+                                </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./assets/projects/JS/calculator.html">
+                    <div class="card js">
+                        <div class="card-image">
+                            <img src="https://cdn2.iconfinder.com/data/icons/ios7-inspired-mac-icon-set/512/Calculator_512.png"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">Calculator<span>🡢</span></div>
+                            <p>It is a working calculator made by HTML, CSS, and JavaScript.</p>
+                            <h3><span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 Logo" width="25" />
+                                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 Logo" width="25" />
+                                    <img class="js" src="https://cdn.simpleicons.org/javascript/F7DF1E"
+                                        alt="JavaScript Logo" width="25" />
+                                </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./assets/projects/JS/additional-calculator.html">
+                    <div class="card js">
+                        <div class="card-image">
+                            <img src="https://png.pngtree.com/thumb_back/fh260/background/20220821/pngtree-calculator-icon-electronic-multiplication-addition-photo-image_19625982.jpg"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">Additional Calculator<span>🡢</span></div>
+                            <p>It is a calculator with basic operations which normal calculator cant perform</p>
+                            <h3><span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 Logo" width="25" />
+                                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 Logo" width="25" />
+                                    <img class="js" src="https://cdn.simpleicons.org/javascript/F7DF1E"
+                                        alt="JavaScript Logo" width="25" />
+                                </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./assets/projects/JS/electric-bill-calculator.html">
+                    <div class="card js">
+                        <div class="card-image">
+                            <img src="https://play-lh.googleusercontent.com/n6P-sbExEhqWImSEKwbzOcCokT0d0VHAdgFwmiZeWdpircYX3A8Eaz-EQ_5Hw9NavyI"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">Electric Bill Calculator<span>🡢</span></div>
+                            <p>It is a calculator that helps you estimate your monthly electricity bill.</p>
+                            <h3><span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 Logo" width="25" />
+                                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 Logo" width="25" />
+                                    <img class="js" src="https://cdn.simpleicons.org/javascript/F7DF1E"
+                                        alt="JavaScript Logo" width="25" />
+                                </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./assets/projects/JS/music-player.html">
+                    <div class="card js">
+                        <div class="card-image">
+                            <img src="./assets/images/MusicPlayerLogo.png"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">Music Player<span>🡢</span></div>
+                            <p>It is a music player with four inbuilt songs.</p>
+                            <h3><span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 Logo" width="25" />
+                                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 Logo" width="25" />
+                                    <img class="js" src="https://cdn.simpleicons.org/javascript/F7DF1E"
+                                        alt="JavaScript Logo" width="25" />
+                                </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./assets/projects/JS/music-player-two.htm">
+                    <div class="card js">
+                        <div class="card-image">
+                            <img src="https://repository-images.githubusercontent.com/338719962/f61378ef-aa0f-43d2-b585-1cc121cb7cb9"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">Music Player 2<span>🡢</span></div>
+                            <p>It is a music player which can select songs from your local storage and play.</p>
+                            <h3><span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 Logo" width="25" />
+                                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 Logo" width="25" />
+                                    <img class="js" src="https://cdn.simpleicons.org/javascript/F7DF1E"
+                                        alt="JavaScript Logo" width="25" />
+                                </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./assets/projects/JS/quiz-game.html">
+                    <div class="card js">
+                        <div class="card-image">
+                            <img src="https://img.freepik.com/premium-vector/quiz-logo-quiz-time-label-with-question-mark_349999-2051.jpg"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">Quiz Game<span>🡢</span></div>
+                            <p>A Quiz game just for fun. Can you answer all the questions correctly?</p>
+                            <h3><span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 Logo" width="25" />
+                                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 Logo" width="25" />
+                                    <img class="js" src="https://cdn.simpleicons.org/javascript/F7DF1E"
+                                        alt="JavaScript Logo" width="25" />
+                                </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./assets/projects/JS/starTriangle.html">
+                    <div class="card js">
+                        <div class="card-image">
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/003/069/433/small/triangle-line-geometric-shape-logo-sign-free-vector.jpg"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">Star in a triangle<span>🡢</span></div>
+                            <p>This program prints star in a triangle shape using JavaScript</p>
+                            <h3><span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img class="js" src="https://cdn.simpleicons.org/javascript/F7DF1E"
+                                        alt="JavaScript Logo" width="25" />
+                                </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="./assets/projects/JS/watch.html">
+                    <div class="card js">
+                        <div class="card-image">
+                            <img src="https://t4.ftcdn.net/jpg/05/61/71/57/360_F_561715747_NmW4tJZX27nZNlbYgddCfGxAgvzpltJn.jpg"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">Watch<span>🡢</span></div>
+                            <p>This is an analogue watch application with an amazing design.</p>
+                            <h3>
+                                <span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 Logo" width="25" />
+                                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 Logo" width="25" />
+                                    <img class="js" src="https://cdn.simpleicons.org/javascript/F7DF1E"
+                                        alt="JavaScript Logo" width="25" />
+                                </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://profound-pudding-b3daa0.netlify.app/">
+                    <div class="card react">
+                        <div class="card-image">
+                            <img style="height: 90%;"
+                                src="https://play-lh.googleusercontent.com/Z63ZeeutVpRcZZEYLhrmm1YtX5lcGX_Lq-8s0xW18jfhq6JshWowG36c2m7U2QcrOZY"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">Multiplication Table<span>🡢</span></div>
+                            <p>This is a Multiplication table made in react js.</p>
+                            <h3>
+                                <span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 Logo" width="25" />
+                                    <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React Logo" width="25" />
+                                </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ratnesh-khirwar.netlify.app/">
+                    <div class="card react">
+                        <div class="card-image">
+                            <img src="https://marketplace.canva.com/EAGHA529T0Y/1/0/1600w/canva-black-and-white-quiz-game-logo-wKYk2n-zJ7k.jpg"
+                                alt="">
+                        </div>
+                        <div class="card-text">
+                            <div class="card-title">Quiz game in React<span>🡢</span></div>
+                            <p>It is another quiz game application which is built in React.js</p>
+                            <h3>
+                                <span>Click to View</span>
+                                <span style="display: flex; gap: 5px;">
+                                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 Logo" width="25" />
+                                    <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React Logo" width="25" />
+                                </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <img src="https://free-3dtextureshd.com/wp-content/uploads/2024/02/5.jpg.webp" alt="">
+        <div class="footer-child">
+            <div>Thank You,
+                <br> Ratnesh Khirwar
+            </div>
+            <div class="footer-child-two">
+                <div>
+                    <a href="https://join.skype.com/invite/vL4e0F6gu3yU" target="_blank">
+                        <div>Skype</div>
+                    </a>
+                    <a href="https://discord.com/channels/@me" target="_blank">
+                        <div>Discord</div>
+                    </a>
+                    <a href="https://github.com/Ratneshkhirwar/Ratnesh-Khirwar_Full-Stack-Developer" target="_blank">
+                        <div>Git-Hub</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <div>Home</div>
+                    </a>
+                    <a href="#profile">
+                        <div>Profile</div>
+                    </a>
+                    <a href="#section-two">
+                        <div>About</div>
+                    </a>
+                    <a href="#project-section">
+                        <div>Projects</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-last-div">★ Made by Ratnesh ★ Powered by Enjoy Programming</div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Store the scroll position before unloading the page
+        window.addEventListener("beforeunload", () => {
+            localStorage.setItem("scrollY", window.scrollY);
+        });
+
+        // On page load, check if there's a stored scroll position and scroll to it
+        window.addEventListener("load", () => {
+            const scrollY = localStorage.getItem("scrollY");
+            if (scrollY) window.scrollTo(0, parseInt(scrollY));
+        });
+    </script>
+
+</body>
+
+</html>

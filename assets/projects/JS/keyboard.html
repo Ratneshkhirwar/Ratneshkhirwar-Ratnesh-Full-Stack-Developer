@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Keyboard</title>
+</head>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+        * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+        }
+
+        h1 {
+                font-size: 40px;
+                position: absolute;
+                top: 40px;
+                left: 550px;
+        }
+
+        .h1.active {
+                color: #fff;
+        }
+
+        body {
+                font-family: 'Lato', sans-serif;
+                transition: .2s;
+        }
+
+        .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                flex-direction: column;
+                margin: 0 10px;
+        }
+
+        .keyboard_wrapp {
+                max-width: 1055px;
+                width: 100%;
+                background-color: #e7e7e7;
+                overflow: hidden;
+                position: relative;
+                overflow: hidden;
+                order: 2;
+        }
+
+        .row {
+                display: flex;
+        }
+
+        .keys {
+                width: 60px;
+                height: 60px;
+                background-color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 4px;
+                transition: .2s;
+                z-index: 5;
+        }
+
+        .backspace_key {
+                width: 118px;
+        }
+
+        .tab_key {
+                width: 90px;
+        }
+
+        .slash_key {
+                width: 88px;
+        }
+
+        .caps_lock_key {
+                width: 128px;
+        }
+
+        .enter_key {
+                width: 120px;
+        }
+
+        .shift_key {
+                width: 124px;
+        }
+
+        .space_key {
+                width: 616px;
+        }
+
+        .text {
+                max-width: 1055px;
+                width: 100%;
+                height: 90px;
+                margin-bottom: 30px;
+                border: none;
+                outline: none;
+                font-size: 26px;
+                background-color: #f7f7f7;
+                padding-left: 10px;
+                transition: .2s;
+        }
+
+        .keys.active {
+                background-color: #333;
+                color: #fff;
+        }
+
+        .keys.remove {
+                animation: keys_animation 0.5s forwards;
+        }
+
+        @keyframes keys_animation {
+                0% {
+                        background-color: #333;
+                        color: #fff;
+                }
+
+                100% {
+                        background-color: #fff;
+                        color: #000;
+                }
+        }
+
+        body.active {
+                background-color: rgb(54, 54, 54);
+        }
+
+        .night_mode {
+                width: 80px;
+                height: 30px;
+                background-color: #e6e6e6;
+                position: absolute;
+                right: 25px;
+                top: 25px;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                transition: .2s;
+        }
+
+        .night_mode.active {
+                background-color: #222222;
+        }
+
+        .toggle_circle {
+                width: 20px;
+                height: 20px;
+                background-color: rgb(54, 54, 54);
+                border-radius: 50px;
+                margin: 0 5px;
+                position: absolute;
+                left: 0;
+                transition: .2s;
+        }
+
+        .toggle_circle.active {
+                left: 60%;
+                background-color: #fff;
+        }
+
+        .keyboard_wrapp.active {
+                background-color: #585858;
+        }
+
+        .keys.keys_night {
+                background-color: #3c3c3c;
+                color: #fff;
+        }
+
+        .text.active {
+                background-color: #4f4f4f;
+                color: #fff;
+        }
+
+        .keys.keys_night.active {
+                background-color: #fff;
+                color: #333;
+        }
+
+        .keys.keys_night.remove {
+                animation: keys_night_animation 0.5s forwards;
+        }
+
+        @keyframes keys_night_animation {
+                0% {
+                        background-color: #fff;
+                        color: #000;
+                }
+
+                100% {
+                        background-color: #333;
+                        color: #fff;
+                }
+        }
+
+        .change_light_color {
+                width: 100px;
+                height: 50px;
+                position: absolute;
+                right: 150px;
+                top: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+
+        .colors_input {
+                width: 100px;
+                height: 50px;
+                border: none;
+                outline: none;
+                background-color: transparent;
+        }
+
+
+        .keyboard_lights {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+        }
+</style>
+
+<body class="">
+        <h1 class="h1">Type in the Input Box</h1>
+        <div class="container">
+                <div class="night_mode">
+                        <div class="toggle_circle"></div>
+                </div>
+                <div class="change_light_color">
+                        <div class="colors">
+                        </div>
+                </div>
+                <div class="keyboard_wrapp">
+                        <div class="keyboard_lights"></div>
+                        <div class="keyboard_keys">
+                                <div class="row">
+                                        <button>
+                                                <div class="keys">`</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">1</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">2</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">3</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">4</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">5</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">6</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">7</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">8</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">9</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">0</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">-</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">=</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys backspace_key">Backspace</div>
+                                        </button>
+                                </div>
+                                <div class="row">
+                                        <button>
+                                                <div class="keys tab_key">Tab</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">Q</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">W</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">E</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">R</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">T</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">Y</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">U</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">I</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">O</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">P</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">{</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">}</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys slash_key">\</div>
+                                        </button>
+                                </div>
+                                <div class="row">
+                                        <button>
+                                                <div class="keys caps_lock_key">Caps Lock</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">A</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">S</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">D</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">F</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">G</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">H</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">J</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">K</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">L</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">;</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">"</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys enter_key">Enter</div>
+                                        </button>
+                                </div>
+                                <div class="row">
+                                        <button>
+                                                <div class="keys shift_key shift_left">Shift</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">Z</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">X</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">C</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">V</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">B</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">N</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">M</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys"><</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">></div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">/</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">?</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys shift_key shift_right">Shift</div>
+                                        </button>
+                                </div>
+                                <div class="row">
+                                        <button>
+                                                <div class="keys ctrl_key ctrl_left">Ctrl</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys win_key">Win</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys alt_key alt_left">Alt</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys space_key"></div>
+                                        </button>
+                                        <button>
+                                                <div class="keys alt_key alt_right">Alt</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys">Fn</div>
+                                        </button>
+                                        <button>
+                                                <div class="keys ctrl_key ctrl_right">Ctrl</div>
+                                        </button>
+                                </div>
+                        </div>
+                </div>
+                <input class="text" type="text">
+        </div>
+</body>
+<script>
+
+        let keys = document.querySelectorAll('.keys');
+        let spaceKey = document.querySelector('.space_key');
+        let shift_left = document.querySelector('.shift_left');
+        let shift_right = document.querySelector('.shift_right');
+        let caps_lock_key = document.querySelector('.caps_lock_key');
+        let toggle_circle = document.querySelector('.toggle_circle');
+        let night_mode = document.querySelector('.night_mode');
+        let body = document.querySelector('body');
+        let text_input = document.querySelector('.text');
+        let change_color = document.querySelector('.change_light_color');
+        let colors_input = document.querySelector('.colors_input');
+        let keyboard_lights = document.querySelector('.keyboard_lights');
+        let keyboard_wrapp = document.querySelector('.keyboard_wrapp');
+        let change_h1 = document.querySelector('.h1');
+
+        for (let i = 0; i < keys.length; i++) {
+                keys[i].setAttribute('keyname', keys[i].innerText);
+                keys[i].setAttribute('lowerCaseName', keys[i].innerText.toLowerCase());
+        }
+
+        window.addEventListener('keydown', function (e) {
+                for (let i = 0; i < keys.length; i++) {
+                        if (e.key == keys[i].getAttribute('keyname') || e.key == keys[i].getAttribute('lowerCaseName')) {
+                                keys[i].classList.add('active')
+                        }
+                        if (e.code == 'Space') {
+                                spaceKey.classList.add('active')
+                        }
+                        if (e.code == 'ShiftLeft') {
+                                shift_right.classList.remove('active')
+                        }
+                        if (e.code == 'ShiftRight') {
+                                shift_left.classList.remove('active')
+                        }
+                        if (e.code == 'CapsLock') {
+                                caps_lock_key.classList.toggle('active');
+                        }
+                }
+        })
+
+        window.addEventListener('keyup', function (e) {
+                for (let i = 0; i < keys.length; i++) {
+                        if (e.key == keys[i].getAttribute('keyname') || e.key == keys[i].getAttribute('lowerCaseName')) {
+                                keys[i].classList.remove('active')
+                                keys[i].classList.add('remove')
+                        }
+                        if (e.code == 'Space') {
+                                spaceKey.classList.remove('active');
+                                spaceKey.classList.add('remove');
+                        }
+                        if (e.code == 'ShiftLeft') {
+                                shift_right.classList.remove('active')
+                                shift_right.classList.remove('remove')
+                        }
+                        if (e.code == 'ShiftRight') {
+                                shift_left.classList.remove('active')
+                                shift_left.classList.remove('remove')
+                        }
+                        setTimeout(() => {
+                                keys[i].classList.remove('remove')
+                        }, 200)
+                }
+        })
+
+
+        night_mode.addEventListener('click', function () {
+                toggle_circle.classList.toggle('active');
+                body.classList.toggle('active');
+                night_mode.classList.toggle('active');
+                keyboard_wrapp.classList.toggle('active');
+                text_input.classList.toggle('active');
+                change_color.classList.toggle('active');
+                change_h1.classList.toggle('active');
+                for (let i = 0; i < keys.length; i++) {
+                        keys[i].classList.toggle('keys_night')
+                }
+        })
+
+        colors_input.addEventListener('input', function () {
+                for (let i = 0; i < keys.length; i++) {
+                        keys[i].style.color = colors_input.value
+                }
+                keyboard_lights.style.background = colors_input.value;
+        })
+</script>
+
+</html>

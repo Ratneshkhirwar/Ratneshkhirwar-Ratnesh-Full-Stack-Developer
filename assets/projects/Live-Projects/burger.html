@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        --back-main: #F4E5D5;
+        --orange: rgb(229, 90, 35);
+        --blue: #318080;
+        background-color: var(--back-main);
+    }
+
+    .header {
+        position: relative;
+        height: 100px;
+        background-color: var(--blue);
+        font-size: 120px;
+        text-align: right;
+        padding: 20px;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        z-index: 2;
+    }
+
+    .head-main .lc-home {
+        width: 61%;
+        margin-left: 39%;
+    }
+
+    .empty1 {
+        background-color: var(--orange);
+        height: 100px;
+    }
+
+    .empty1 ul {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 60px;
+    }
+
+    .empty1 ul a {
+        text-decoration: none !important;
+        color: #000;
+        z-index: 2;
+    }
+
+    .hero-main {
+        display: flex;
+    }
+
+    .hero-main img {
+        position: relative;
+        top: -10rem;
+    }
+
+    .banner {
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: #ffcb05;
+        color: #000;
+        padding: 10px 0;
+        font-size: 1.5rem;
+        position: relative;
+        width: 100%;
+    }
+
+    .banner-content {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scroll-banner 15s linear infinite;
+        left: 61%;
+    }
+
+    .banner-content span {
+        display: inline-block;
+        padding-right: 50px;
+        /* Space between the repeated text */
+    }
+
+    @keyframes scroll-banner {
+        0% {
+            transform: translateX(61%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .yl-main-home {
+        height: 400px;
+        width: 100%;
+        margin: 50px;
+        transform: rotateZ(-3deg);
+        background-color: #ffcb05;
+    }
+
+    .or-main-home {
+        height: 400px;
+        width: 100%;
+        background-color: var(--orange);
+        transform: rotateZ(6deg);
+        display: flex;
+        padding-left: 50px;
+        padding-right: 50px;
+        align-items: center;
+        color: var(--back-main);
+    }
+
+    .vertical-line {
+        width: 2px;
+        height: 80%;
+        background-color: var(--back-main);
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .carousel {
+        height: 100vh;
+    }
+
+    .container-1 {
+        height: 200px;
+        width: 850px;
+        background-color: var(--orange);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 23px;
+        color: #fff;
+    }
+
+    .container-1 span {
+        font-size: 50px;
+        font-family: "Luckiest Guy", cursive;
+        font-weight: 1000;
+        font-style: normal;
+    }
+
+    .container-main {
+        width: calc(100% - 50px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 50px;
+        overflow: hidden;
+    }
+
+    .list-img {
+        position: relative;
+        right: -50px;
+        transform: rotateZ(-30deg);
+    }
+
+    .container-main-two {
+        height: 78vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .container-main-two div {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+    }
+
+    .container-main-two span {
+        font-size: 58px;
+        font-weight: 1000;
+        color: var(--orange);
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 900;
+        font-style: normal;
+    }
+
+    .wrapper-main {
+        display: flex;
+        align-items: center;
+        margin-left: 80px;
+        margin-top: 100px;
+    }
+
+    .wrapper {
+        max-width: 1400px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .wrapper i {
+        height: 76px;
+        width: 76px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        text-align: center;
+        line-height: 76px;
+        position: absolute;
+        background-color: var(--blue);
+        transition: .5s all;
+    }
+
+    .wrapper i:hover {
+        background-color: #3b9b9b;
+    }
+
+    .wrapper i:first-child {
+        right: calc(100% / 4 + 85px);
+        bottom: 0;
+        z-index: 3;
+    }
+
+    .wrapper i:last-child {
+        right: calc(100% / 4 - 0px);
+        bottom: 0;
+        z-index: 3;
+    }
+
+    .wrapper .carasoul {
+        white-space: nowrap;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        font-size: 0;
+        cursor: none;
+    }
+
+    .carasoul.dragging {
+        scroll-behavior: auto;
+    }
+
+    .carasoul.dragging img {
+        pointer-events: none;
+    }
+
+    .carasoul img {
+        transition: background-color 0.5s ease;
+        height: 340px;
+        object-fit: cover;
+        width: 340px;
+        background-color: #fff;
+        border-radius: 20px;
+        margin-left: 14px;
+    }
+
+    .carasoul img:first-child {
+        margin-left: 356px;
+    }
+
+    .info-div {
+        position: absolute;
+        height: 340px;
+        left: 0;
+        width: 404px;
+        z-index: 2;
+        display: flex;
+        padding-left: 40px;
+        padding-top: 50px;
+        align-items: center;
+        background-color: var(--blue);
+    }
+
+    .info-div-main {
+        transition: all .5s ease;
+    }
+
+    .info-div h1 {
+        color: #fff;
+        opacity: 1;
+        transition: opacity 1s ease;
+    }
+
+    .hidden-text {
+        opacity: 0;
+    }
+
+    .info-div h1 span:last-child {
+        font-size: 70px;
+        color: #ffcb05;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .info-div-two {
+        background-color: var(--blue);
+        height: 40vh;
+        padding: 50px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .info-div-two span h1 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        font-size: 42px;
+    }
+
+    .burger-type {
+        background-color: var(--orange);
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 20px;
+        width: 100px;
+        font-weight: 800;
+        margin-left: 50px;
+    }
+
+    .burger-type-signature {
+        background-color: #ffcb05;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 20px;
+        width: 100px;
+        margin-left: 50px;
+    }
+
+    .menu-head {
+        color: var(--orange);
+        text-align: center;
+    }
+
+    .menu-head span:first-child h2 {
+        color: #000;
+        font-weight: 1000;
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        margin-top: 100px;
+    }
+
+    .menu-head h1 {
+        font-size: 70px;
+        font-weight: 1000;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
+    .review-main-layout {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .review-main-layout .div-main {
+        height: 100%;
+        width: 650px;
+    }
+
+    .review-main-layout div i {
+        font-size: 100px;
+        color: var(--orange);
+    }
+
+    .review-main-layout div i:nth-child(2) {
+        position: relative;
+        left: -40px;
+    }
+
+    .review-main-layout div div {
+        font-size: 30px;
+        margin: 25px;
+    }
+
+    .review-main-layout div:first-child {
+        width: 500px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .horizontal-line {
+        display: block;
+        height: 2px;
+        width: 50%;
+        position: relative;
+        background-color: var(--orange)
+    }
+
+    .hr-on-review {
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+    }
+
+    .hr-on-review span:first-child {
+        margin-right: 20px;
+    }
+
+    .second-focus-reviews {
+        color: #8e8e8e;
+        font-size: 20px;
+        position: relative;
+        top: -20px;
+    }
+
+    .prop-two {
+        height: 500px;
+        width: 500px;
+        position: relative;
+        top: -500px;
+        z-index: -3;
+        border-radius: 500px;
+        background-color: var(--orange);
+    }
+
+    .franchise {
+        display: flex;
+        height: 250px;
+        justify-content: space-between;
+        padding-left: 100px;
+        padding-right: 100px;
+        font-size: 40px;
+        width: 100%;
+        letter-spacing: 3px;
+        background-image: url(https://wataburger.in/wp-content/uploads/2022/10/Enquiry-form-BG.png);
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+        color: #fff;
+        align-items: center;
+    }
+
+    .franchise button {
+        padding: 10px;
+        font-size: 30px;
+        border-radius: 10px;
+        border: none;
+        background-color: #ffcb05;
+        transition: all .5s;
+    }
+
+    .franchise button:hover {
+        background-color: #e1ca6b;
+    }
+
+    .footer {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .footer div:first-child {
+        height: 45%;
+        padding: 20px;
+        font-size: 30px;
+        font-weight: 100;
+        margin-right: 10px;
+    }
+
+    .footer div:first-child div {
+        padding: 10px;
+    }
+
+    .ft-top-section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer button {
+        font-size: 20px;
+        padding: 10px;
+        width: 200px;
+        border-radius: 10px;
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+        font-weight: 100;
+    }
+
+    .ft-second-child {
+        display: flex;
+        padding-right: 50px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .ft-second-child div {
+        font-size: 18px !important;
+        margin-left: 15px;
+    }
+
+    .ft-second-child div a {
+        color: #fff;
+        -webkit-text-size-adjust: 10px;
+    }
+
+    .ft-top-right-section {
+        display: flex;
+    }
+
+    .ft-middle {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .ft-top-last-child {
+        height: 100px;
+        text-align: center !important;
+    }
+
+    .ft-top-last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .ft-top-last-child input {
+        width: 500px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 50px;
+        color: white;
+        margin-top: 10px;
+        background-color: transparent;
+        border-radius: 10px;
+        border: 1px solid white;
+        font-size: 20px;
+    }
+
+    .ft-top-last-child textarea {
+        resize: none;
+        width: 500px;
+        height: 100px;
+        padding-top: 5px;
+        padding-left: 50px;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 10px;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    /* Add these styles to your existing <style> section */
+
+    /* Mobile-first approach - base styles for small screens */
+    @media screen and (max-width: 768px) {
+        .header {
+            font-size: 60px;
+            text-align: center;
+            height: auto;
+            padding: 10px;
+        }
+
+        .head-main .lc-home {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .empty1 ul {
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .hero-main {
+            flex-direction: column;
+        }
+
+        .hero-main img {
+            width: 100%;
+            top: 0;
+        }
+
+        .yl-main-home {
+            height: auto;
+            margin: 20px 10px;
+        }
+
+        .or-main-home {
+            flex-direction: column;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .vertical-line {
+            width: 80%;
+            height: 2px;
+            margin: 20px auto;
+        }
+
+        .container-main {
+            flex-direction: column;
+            margin-left: 0;
+            width: 100%;
+            padding: 0 15px;
+        }
+
+        .container-1 {
+            width: 100%;
+            flex-direction: column;
+            height: auto;
+            padding: 20px;
+        }
+
+        .container-1 .vertical-line {
+            width: 80%;
+            height: 2px;
+            margin: 15px auto;
+        }
+
+        .list-img {
+            display: none;
+        }
+
+        .container-main-two {
+            flex-direction: column;
+            height: auto;
+            padding: 20px;
+        }
+
+        .container-main-two div {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .container-main-two img {
+            width: 90%;
+            height: auto;
+        }
+
+        .wrapper-main {
+            margin-left: 0;
+            margin-top: 50px;
+        }
+
+        .info-div {
+            position: static;
+            width: 100%;
+            height: auto;
+            padding: 20px;
+        }
+
+        .wrapper {
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .wrapper i:first-child,
+        .wrapper i:last-child {
+            position: static;
+            margin: 10px;
+        }
+
+        .carasoul img:first-child {
+            margin-left: 0;
+        }
+
+        .info-div-two {
+            height: auto;
+        }
+
+        .review-main-layout {
+            flex-direction: column;
+        }
+
+        .review-main-layout .div-main {
+            width: 100%;
+        }
+
+        .franchise {
+            flex-direction: column;
+            height: auto;
+            padding: 30px 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .franchise button {
+            margin-top: 20px;
+        }
+
+        .ft-top-section {
+            flex-direction: column;
+        }
+
+        .ft-top-right-section {
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .ft-top-last-child input,
+        .ft-top-last-child textarea {
+            width: 100%;
+        }
+    }
+
+    /* Tablet styles */
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .header {
+            font-size: 80px;
+        }
+
+        .head-main .lc-home {
+            width: 70%;
+            margin-left: 30%;
+        }
+
+        .hero-main img {
+            width: 50%;
+        }
+
+        .yl-main-home {
+            margin: 20px;
+        }
+
+        .container-1 {
+            width: 700px;
+        }
+
+        .container-main-two div {
+            width: 450px;
+        }
+
+        .info-div {
+            width: 350px;
+        }
+
+        .review-main-layout .div-main {
+            width: 500px;
+        }
+
+        .ft-top-last-child input,
+        .ft-top-last-child textarea {
+            width: 350px;
+        }
+    }
+
+    /* Additional fixes for carousel and navigation */
+    .carasoul {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        #carouselExampleControlsNoTouching {
+            width: 90% !important;
+            height: auto !important;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            padding: 15px !important;
+        }
+    }
+</style>
+
+<body>
+    <main>
+        <div class="head-main">
+            <div class="header">
+                "THE DAWN OF BURGERS"
+            </div>
+            <div class="lc-home">
+                <div class="empty1">
+                    <nav>
+                        <ul>
+                            <a href="">
+                                <li>Home</li>
+                            </a>
+                            <a href="./burger_about.html">
+                                <li>About US</li>
+                            </a>
+                            <a href="#menu">
+                                <li>Menu</li>
+                            </a>
+                            <a href="">
+                                <li>Franchise</li>
+                            </a>
+                            <a href="">
+                                <li>Contact-us</li>
+                            </a>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="banner">
+                    <div class="banner-content">
+                        <span>Delicious Burgers • Fresh Ingredients • Handcrafted Perfection • Juicy & Flavorful</span>
+                        <span>Delicious Burgers • Fresh Ingredients • Handcrafted Perfection • Juicy & Flavorful</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="hero-main">
+            <div class="side-img-hero">
+                <img decoding="async" height="590"
+                    src="https://wataburger.in/wp-content/uploads/2022/09/About-Us-graphic1.jpg"
+                    class="attachment-full size-full wp-image-2134" alt="Burger graphic - about us">
+            </div>
+
+            <div class="yl-main-home">
+                <div class="or-main-home">
+                    <h1>India’s largest home-grown burger chain is here to serve you.</h1>
+                    <div class="vertical-line"></div>
+                    <div>We know you’re obviously a fan of desi flavours and have your heart set on it.Your search for
+                        the best Indian fusion<br> burgers ends here. With the taste of India in every <br> bite, we
+                        have thoughtfully curated our<br> menu to serve the Indian palette. Bursting with flavours,<br>
+                        our wide range of burgers will always make you <br> crave for more. </div>
+                </div>
+            </div>
+        </div>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img style="pointer-events: none;"
+                        src="https://wataburger.in/wp-content/uploads/2022/09/Wab-Home-Page-Banner-2-v3-min.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img style="pointer-events: none;"
+                        src="https://wataburger.in/wp-content/uploads/2022/09/Wab-Home-Page-Banner-1-min-1.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img style="pointer-events: none;"
+                        src="https://wataburger.in/wp-content/uploads/2022/09/Wab-Home-Page-Banner-3-min.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        </div>
+        <div class="container-main">
+            <div class="container-1">
+                <div>
+                    <span>65+</span><br>
+                    Outlet
+                </div>
+                <div class="vertical-line"></div>
+                <div>
+                    <span>27+</span><br>
+                    Cities
+                </div>
+                <div class="vertical-line"></div>
+                <div>
+                    <span>2.5L+</span><br>
+                    Burgers Sold/Month
+                </div>
+            </div>
+            <div class="list-img">
+                <img src="./assest/list-img.png" alt="">
+            </div>
+        </div>
+        <div class="container-main-two">
+            <div>
+                <span>
+                    Indulgent Gourmet Burgers, Perfected to Savor .....
+                </span>
+                Burgers here are a gourmet delight, made from premium grass-fed beef, topped with fresh greens,
+                artisanal cheeses, and house-made sauces on a toasted brioche bun. Each bite offers a perfect balance of
+                indulgence and refinement, elevating the burger to a true culinary masterpiece.
+            </div>
+            <img height="90%" src="./assest/Screenshot 2024-09-14 182550.png" alt="">
+        </div>
+        <div class="wrapper-main" id="menu">
+            <div class="info-div">
+                <div class="info-div-main" id="changeText">
+                    <h1>Welcome To The choosen <br> <span> Heaven </span></h1>
+                </div>
+            </div>
+            <div class="wrapper">
+                <i id="left" class='bx bxs-chevron-left'></i>
+                <div class="carasoul" onmouseleave="setDefaultBg(9)">
+                    <img src="./assest/best-Seller-1.png" id="change-background1" onmouseleave="setDefaultBg()"
+                        onmouseover="changeDiscription(1)" alt="burger-shop" draggable="false">
+                    <img src="./assest/best-Seller-2.png" id="change-background2" onmouseleave="setDefaultBg()"
+                        onmouseover="changeDiscription(2)" alt="burger-shop" draggable="false">
+                    <img src="./assest/best-Seller-3.png" id="change-background3" onmouseleave="setDefaultBg()"
+                        onmouseover="changeDiscription(3)" alt="burger-shop" draggable="false">
+                    <img src="./assest/best-Seller-4.png" id="change-background4" onmouseleave="setDefaultBg()"
+                        onmouseover="changeDiscription(4)" alt="burger-shop" draggable="false">
+                    <img src="./assest/best-Seller-5.png" id="change-background5" onmouseleave="setDefaultBg()"
+                        onmouseover="changeDiscription(5)" alt="burger-shop" draggable="false">
+                    <img src="./assest/best-Seller-6.png" id="change-background6" onmouseleave="setDefaultBg()"
+                        onmouseover="changeDiscription(6)" alt="burger-shop" draggable="false">
+                    <img src="./assest/best-Seller-7.png" id="change-background7" onmouseleave="setDefaultBg()"
+                        onmouseover="changeDiscription(7)" alt="burger-shop" draggable="false">
+                    <img src="./assest/best-Seller-8.png" id="change-background8" onmouseleave="setDefaultBg()"
+                        onmouseover="changeDiscription(8)" alt="burger-shop" draggable="false">
+                </div>
+                <i id="right" class='bx bxs-chevron-right'></i>
+            </div>
+        </div>
+        <div class="info-div-two">
+            <span>
+                <h1>Discription</h1>
+            </span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aperiam dolores nemo, natus
+            quaerat obcaecati ducimus animi? Tempore doloremque numquam adipisci nostrum quisquam magnam odio
+            atque tenetur? Amet, saepe id? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum error
+            enim quisquam nemo quod, exercitationem a dolore at voluptate soluta nulla optio cupiditate? Debitis ullam
+            obcaecati eligendi! A, obcaecati itaque.
+        </div>
+
+        <div>
+            <img width="1519.1px" src="https://wataburger.in/wp-content/uploads/2022/09/WAB-Sign-Banner-2.jpg" alt="">
+        </div>
+
+        <div style="height: 120vh;">
+            <div class="menu-head">
+                <span>
+                    <h2>Reviews</h2>
+                </span>
+                <h1>WAT-A-REVIEW</h1>
+            </div>
+            <div style="display: flex;justify-content: center;">
+                <div id="carouselExampleControlsNoTouching"
+                    style="margin-top: 100px; height: 600px;overflow: hidden;width: 1200px;" class="carousel slide"
+                    data-bs-touch="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="review-main-layout">
+                                <div class="div-main">
+                                    <img src="https://wataburger.in/wp-content/uploads/2022/09/neha-2.png" width="100%"
+                                        alt="">
+                                </div>
+                                <div class="div-main">
+                                    <i class='bx bxs-quote-single-left'></i><i class='bx bxs-quote-single-left'></i>
+                                    <div>
+                                        Great music! The vibe was also good, staff was very helpful and the food was
+                                        amazing. The burgers and desserts are a must try! I had the Sizzling Brownie. A
+                                        must go in CP. <br> <br>
+                                        <span class="hr-on-review">
+                                            <span>Neha</span><span class="horizontal-line"></span>
+                                        </span>
+                                        <span class="second-focus-reviews">Connaught Place</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="review-main-layout">
+                                <div class="div-main">
+                                    <img src="https://wataburger.in/wp-content/uploads/2022/09/review.png" width="100%"
+                                        alt="">
+                                </div>
+                                <div class="div-main">
+                                    <i class='bx bxs-quote-single-left'></i><i class='bx bxs-quote-single-left'></i>
+                                    <div>
+
+                                        The variety of burgers at Wat-a-Burger is amazing! I tried their Crunchy Paneer
+                                        Burger which was delicious and filling. I also tried their cheese loaded fries
+                                        and Cold Coffee Frappe- they were delicious as well. A great and very reasonable
+                                        place for burger lovers. <br><br>
+                                        <span class="hr-on-review">
+                                            <span>Neharika</span><span class="horizontal-line"></span>
+                                        </span>
+                                        <span class="second-focus-reviews">Connaught Place</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="review-main-layout">
+                                <div class="div-main">
+                                    <img src="https://wataburger.in/wp-content/uploads/2022/09/IMG_1693-1.jpg"
+                                        width="100%" alt="">
+                                </div>
+                                <div class="div-main">
+                                    <i class='bx bxs-quote-single-left'></i><i class='bx bxs-quote-single-left'></i>
+                                    <div>The Paneer Tikka Burger I tried was a delicious blend of Indian spices and
+                                        classic burger elements. The paneer was well-marinated, juicy, and had a nice
+                                        smoky flavor. Fresh veggies added crunch, while the creamy sauce tied everything
+                                        together perfectly. A tasty, satisfying fusion! <br><br>
+                                        <span class="hr-on-review">
+                                            <span>Sandra Mendez</span><span class="horizontal-line"></span>
+                                        </span>
+                                        <span class="second-focus-reviews">Kozhikode</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="review-main-layout">
+                                <div class="div-main">
+                                    <img src="https://wataburger.in/wp-content/uploads/2022/09/IMG_1694.jpg"
+                                        width="100%" alt="">
+                                </div>
+                                <div class="div-main">
+                                    <i class='bx bxs-quote-single-left'></i><i class='bx bxs-quote-single-left'></i>
+                                    <div>YOU GOTTA EAT HERE!
+                                        Idk man their burgers just hit different. Makes me wonder if they put something
+                                        special in their dishes. I was already full but I still ate three burgers man,
+                                        it’s crazy!
+                                        <br><br>
+                                        <span class="hr-on-review">
+                                            <span>Sam</span><span class="horizontal-line"></span>
+                                        </span>
+                                        <span class="second-focus-reviews">Jhansi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button"
+                        data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                        <span style="background-color: var(--orange);padding: 30px;" class="carousel-control-prev-icon"
+                            aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button"
+                        data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                        <span style="background-color: var(--orange);padding: 30px;" class="carousel-control-next-icon"
+                            aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="prop-two"></div>
+        </div>
+
+        <div class="franchise">
+            <div>
+                FOR FRANCHISE <br>
+                ENQUIRES <br>
+                <i class='bx bxs-phone-call'></i>0000000000
+            </div>
+            <div>
+                <button>&emsp;Find Out More → &emsp;</button>
+            </div>
+        </div>
+
+        <div class="footer" style="overflow: hidden;">
+            <div class="ft-top-section">
+                <div>
+                    <p>Thank you, <br>
+                        We're Done with this
+                    </p>
+                    <p>
+                        <button>Learn more</button>
+                    </p>
+                </div>
+                <div class="ft-middle">
+                    <div class="ft-top-first-child">
+                        We're ready to hear anything from you
+                    </div>
+                    <div class="ft-top-last-child">
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Email" required="@">
+                        <div>
+                            <textarea placeholder="Comment" name="" id=""></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft-top-right-section">
+                    <div>
+                        <p>Availabe on</p>
+                        <p>DotPe</p>
+                        <p>Zomato</p>
+                        <p>Swiggy</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <p>Home</p>
+                        <p>Menu</p>
+                        <p>About us</p>
+                        <p>Franchise</p>
+                        <p>Contact-us</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ft-second-child">
+                <div>
+                    Made By <a href="./index.html" target="_blank">@Ratnesh</a>,<br>
+                    All rights Reserved
+                </div>
+                <div>
+                    <button>Send</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+
+    let y = 0
+
+    const carousel = document.querySelector(".carasoul"),
+        firstImg = carousel.querySelectorAll("img")[0];
+    arrowIcons = document.querySelectorAll(".wrapper i");
+
+    let firstImgWidth = firstImg.clientWidth + 14
+    let scrollWidth = carousel.scrollWidth - carousel.clientWidth
+    let isDragStart = false, positionDiff
+
+    arrowIcons.forEach(icon => {
+        icon.addEventListener("click", () => {
+            carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth
+        })
+    });
+
+    const dragging = (e) => {
+        positionDiff = (e.pageX || e.touches[0].pageX) - prev.pageX
+    }
+
+    function changeDiscription(x) {
+        let test = ['<h1>Welcome To The choosen <br> <span> Heaven </span></h1>']
+        const textElement = document.getElementById('changeText')
+        textElement.classList.add('hidden-text')
+
+        if (x == 1) {
+            setTimeout(() => {
+                test = '<h1> Name = <span style="color : #ffcb05"> Peri-Peri Chicken Burger</span> <br> Price = 139/- <br> <span class="burger-type">&ensp;Non-Veg &ensp;</span> <br> </h1>'
+                textElement.classList.remove('hidden-text')
+                document.getElementById("changeText").innerHTML = test
+            }, 200)
+            document.getElementById("change-background1").style.backgroundColor = "var(--orange)"
+        } else if (x == 2) {
+            setTimeout(() => {
+                test = '<h1> Name = <span style="color : #ffcb05">Buntastic Kadhai Paneer</span> <br> Price = 159/- <br> <span class="burger-type">&ensp;Veg &ensp;</span> <br> </h1>'
+                textElement.classList.remove('hidden-text')
+                document.getElementById("changeText").innerHTML = test
+            }, 200)
+            document.getElementById("change-background2").style.backgroundColor = "var(--orange)"
+        } else if (x == 3) {
+            setTimeout(() => {
+                test = '<h1> Name = <span style="color : #ffcb05">Korean Chilli Burger</span> <br> Price = 299/- <br> <span class="burger-type">&ensp;Non-Veg &ensp;</span> <br> </h1>'
+                textElement.classList.remove('hidden-text')
+                document.getElementById("changeText").innerHTML = test
+            }, 200)
+            document.getElementById("change-background3").style.backgroundColor = "var(--orange)"
+        } else if (x == 4) {
+            setTimeout(() => {
+                test = '<h1> Name = <span style="color : #ffcb05">Cold Coffee Frappe</span> <br> Price = 149/- <br> <span class="burger-type-signature">&ensp;Signature &ensp;</span> <br> </h1>'
+                textElement.classList.remove('hidden-text')
+                document.getElementById("changeText").innerHTML = test
+            }, 200)
+            document.getElementById("change-background4").style.backgroundColor = "var(--orange)"
+        } else if (x == 5) {
+            setTimeout(() => {
+                test = '<h1> Name = <span style="color : #ffcb05">BBQ Chicken Sandwitch</span> <br> Price = 179/- <br> <span class="burger-type">&ensp;Non-Veg &ensp;</span> <br> </h1>'
+                textElement.classList.remove('hidden-text')
+                document.getElementById("changeText").innerHTML = test
+            }, 200)
+            document.getElementById("change-background5").style.backgroundColor = "var(--orange)"
+        } else if (x == 6) {
+            setTimeout(() => {
+                test = '<h1> Name = <span style="color : #ffcb05"> Desi Street 2.0 Burger</span> <br> Price = 99/- <br> <span class="burger-type">&ensp;Veg &ensp;</span> <br> </h1>'
+                textElement.classList.remove('hidden-text')
+                document.getElementById("changeText").innerHTML = test
+            }, 200)
+            document.getElementById("change-background6").style.backgroundColor = "var(--orange)"
+        } else if (x == 7) {
+            setTimeout(() => {
+                test = '<h1> Name = <span style="color : #ffcb05"> Grilled Mutton Kebab Burger</span> <br> Price = 149/- <br> <span class="burger-type">&ensp;Non-Veg &ensp;</span> <br> </h1>'
+                textElement.classList.remove('hidden-text')
+                document.getElementById("changeText").innerHTML = test
+            }, 200)
+            document.getElementById("change-background7").style.backgroundColor = "var(--orange)"
+        } else if (x == 8) {
+            setTimeout(() => {
+                test = '<h1> Name = <span style="color : #ffcb05">Hawallan Teriyaki Chicken Burger</span> <br> Price = 299/- <br> <span class="burger-type">&ensp;Non-Veg &ensp;</span> <br> </h1>'
+                textElement.classList.remove('hidden-text')
+                document.getElementById("changeText").innerHTML = test
+            }, 200)
+            document.getElementById("change-background8").style.backgroundColor = "var(--orange)"
+        }
+
+
+    }
+
+    function setDefaultBg(x) {
+        document.getElementById("change-background1").style.backgroundColor = ""
+        document.getElementById("change-background2").style.backgroundColor = ""
+        document.getElementById("change-background3").style.backgroundColor = ""
+        document.getElementById("change-background4").style.backgroundColor = ""
+        document.getElementById("change-background5").style.backgroundColor = ""
+        document.getElementById("change-background6").style.backgroundColor = ""
+        document.getElementById("change-background7").style.backgroundColor = ""
+        document.getElementById("change-background8").style.backgroundColor = ""
+
+        let test = ['<h1>Welcome To The choosen <br> <span> Heaven </span></h1>']
+        const textElement = document.getElementById('changeText')
+        textElement.classList.add('hidden-text')
+
+        setTimeout(() => {
+            test = '<h1>Welcome To The choosen <br> <span> Heaven </span></h1>'
+            textElement.classList.remove('hidden-text')
+
+            document.getElementById("changeText").innerHTML = test
+        }, 200)
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <title>About us</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        --back-main: #F4E5D5;
+        --orange: rgb(229, 90, 35);
+        --blue: #318080;
+        background-color: var(--back-main);
+    }
+
+    .header {
+        position: relative;
+        height: 100px;
+        background-color: var(--blue);
+        font-size: 120px;
+        text-align: center;
+        padding: 20px;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        z-index: 2;
+    }
+
+    .empty1 {
+        background-color: var(--orange);
+        height: 100px;
+    }
+
+    .empty1 ul {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 60px;
+    }
+
+    .empty1 ul a {
+        text-decoration: none !important;
+        color: #000;
+        z-index: 2;
+    }
+
+    .banner {
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: #ffcb05;
+        color: #000;
+        padding: 10px 0;
+        font-size: 1.5rem;
+        position: relative;
+        width: 100%;
+    }
+
+    .vertical-line {
+        width: 2px;
+        height: 80%;
+        background-color: var(--back-main);
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 472px;
+        object-position: bottom;
+        object-fit: cover;
+    }
+
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero h1 {
+        position: absolute;
+        color: var(--back-main);
+        font-size: 6rem;
+    }
+
+    .info-one {
+        padding: 50px;
+    }
+ 
+    .info-one .head h1 {
+        font-size: 80px;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 900;
+        font-style: normal;
+        color: var(--orange);
+        text-align: center;
+    }
+
+    .info-one .floating-one {
+        position: absolute;
+        height: 300px;
+        width: 350px;
+        right: 1%;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        border-radius: 20px;
+        background-color: #fedd59;
+    }
+
+    .main-info{
+        width: 1059px;
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(49, 49, 49, 0.115);
+        padding: 60px;
+        font-size: 22px;
+        color: #000;
+        margin-left: 100px;
+    }
+
+    @media screen and (max-width: 400px) {
+        .header {
+            font-size: 73px !important;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        .header {
+            padding-top: 25px;
+            font-size: 80px;
+            line-height: 80px;
+        }
+
+        .lc-home ul {
+            visibility: hidden;
+        }
+
+        .lc-home ul a {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        .header {
+            font-size: 90px;
+        }
+    }
+</style>
+
+<body>
+    <div class="head-main">
+        <div class="header">
+            "THE DAWN OF BURGERS"
+        </div>
+        <div class="lc-home">
+            <div class="empty1">
+                <nav>
+                    <ul>
+                        <a href="./burger.html  ">
+                            <li>Home</li>
+                        </a>
+                        <a href="./burger_about.html">
+                            <li>About US</li>
+                        </a>
+                        <a href="">
+                            <li>Menu</li>
+                        </a>
+                        <a href="">
+                            <li>Franchise</li>
+                        </a>
+                        <a href="">
+                            <li>Contact-us</li>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hero">
+                <img src="./assest/Screenshot 2024-09-29 100833.jpg" alt="">
+                <h1>About us</h1>
+            </div>
+            <div class="banner">
+                <marquee behavior="" scrollamount="15" direction="">
+                    <span>Delicious Burgers • Fresh Ingredients • Handcrafted Perfection • Juicy & Flavorful</span>
+                    <span>Delicious Burgers • Fresh Ingredients • Handcrafted Perfection • Juicy & Flavorful</span>
+                </marquee>
+            </div>
+
+        </div>
+    </div>
+    <div class="info-one">
+        <div class="head">
+            <h1>Who are We ?</h1>
+        </div>
+        <br>
+        <div class="floating-one">
+            <h1>More than an ordinary burger point</h1>
+        </div>
+        <br>
+        <br>
+        <div class="main-info">
+            <p>
+                Farman Beig and Rajat Jaiswal founded Wat-a-Burger in 
+                2016 to offer Indian consumers a taste of fusion
+                burgers in a market dominated by US fast food QSR chains. Wat-a-Burger’s desi recipes are suited for
+                Indian
+                palettes. The emphasis is on original Indian recipes and not tweaking existing flavours. Pudina chutney,
+                Achari flavour, Makhani sauce, Spicy chilly are some of our key offerings.
+            </p>
+            <p>
+                Starting a business was always on Farman and Rajat’s minds. While Farman was in England pursuing his MBA
+                and
+                Rajat was undergoing pilot training, both knew that once they were back in India, they would set up a
+                business together.
+            </p>
+            <p>
+                Since opening their first outlet in Noida Sector 18, Wat-a-Burger has scaled to more than 65 joints
+                across
+                27 cities in over six years. This includes Delhi, Bengaluru, Ahmedabad, Mumbai, Guwahati, Lucknow,
+                Patna,
+                Ranchi, Muzaffarpur, Bhopal, Bhubaneswar, Gorakhpur, Jhansi, Kozhikode, and Gurgaon to name a few.
+            </p>
+        </div>
+    </div>
+    
+</body>
+
+</html>

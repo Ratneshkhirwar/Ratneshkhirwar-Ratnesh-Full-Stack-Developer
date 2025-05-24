@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body,
+    html {
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        overflow-x: hidden;
+        background-color: antiquewhite;
+    }
+
+    .nav {
+        height: 8vh;
+        width: 100%;
+        background-color: #313131;
+        color: antiquewhite;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav {
+        font-size: 40px;
+        padding-left: 50px;
+    }
+
+    .nav .element {
+        width: 60%;
+    }
+
+    .nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 20px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .search-container input {
+        padding: 5px;
+        width: 24vw;
+    }
+
+    .home {
+        height: 66vh;
+        width: 100vw;
+        background-image: url("https://assets.architecturaldigest.in/photos/66a25ed6d5f8a3c4b88a0dfb/master/w_1600,c_limit/Novaara%20%20(5).jpg");
+        background-position: 0 -300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .heading {
+        width: 100vw;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .cards {
+        width: 100vw;
+        height: 55vh;
+        padding: 50px;
+        display: flex;
+    }
+
+    .cards .child {
+        height: 200px;
+        width: 200px;
+        margin-left: 70px;
+        text-align: center;
+        margin-bottom: 200px;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .cards button {
+        font-size: 17px;
+        padding: 5px;
+        width: 70%;
+        background-color: rgb(255, 215, 163);
+        border: none;
+        border-radius: 10px;
+    }
+
+    .cards .divto {
+        display: flex;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .home {
+            background-position: 0 0;
+        }
+
+        .cards .child {
+            margin-left: 70px;
+        }
+
+        .cards .divto {
+            display: block;
+            justify-content: center;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .cards {
+            display: block;
+            justify-content: center;
+            padding-top: 10px;
+        }
+
+        .cards .child {
+            margin-left: 20px;
+        }
+
+        .cards .divto {
+            display: flex;
+        }
+    }
+</style>
+
+<body>
+    <main>
+        <div class="nav">
+            <i class='bx bx-fork'></i>
+            <div class="logo">Menu</div>
+            <div class="element">
+                <ul>
+                    <li>Menu</li>
+                    <li>Resumes</li>
+                    <li>Reservation</li>
+                    <li>Gallory</li>
+                </ul>
+            </div>
+            <div class="search-container">
+                <form>
+                    <input type="text" placeholder="Search.." name="search">
+                </form>
+            </div>
+        </div>
+
+        <div class="home"></div>
+
+        <div>
+            <div class="heading">
+                <h1>Best-Selling</h1>
+            </div>
+            <div class="cards">
+                <div class="divto">
+                    <div class="child">
+                        <img src="https://imperiacaviar.com/cdn/shop/articles/caviar_foods.jpg?v=1685650828&width=500"
+                            alt="">
+                        <h1>Menu</h1>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <br>
+                        <button>Learn more</button>
+                    </div>
+                    <div class="child">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkBRcWkZi3mLbssyIlRRYhLlVJpac9B1AvMA&s"
+                            alt="">
+                        <h1>Menu</h1>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <br>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+                <div class="divto">
+                    <div class="child">
+                        <img src="https://www.restaurantware.com/cdn/shop/articles/img-1717094690780_5ea0e070-ad3a-491d-8220-9aff70f2cb8e.png?v=1722246430"
+                            alt="">
+                        <h1>Menu</h1>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <br>
+                        <button>Learn more</button>
+                    </div>
+                    <div class="child">
+                        <img src="https://png.pngtree.com/background/20230417/original/pngtree-dessert-luxury-food-picture-image_2446682.jpg"
+                            alt="">
+                        <h1>Menu</h1>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <br>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+                <div class="divto">
+                    <div class="child">
+                        <img src="https://www.shutterstock.com/image-photo/food-elegant-black-plate-260nw-757579267.jpg"
+                            alt="">
+                        <h1>Menu</h1>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <br>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </main>
+</body>
+
+</html>

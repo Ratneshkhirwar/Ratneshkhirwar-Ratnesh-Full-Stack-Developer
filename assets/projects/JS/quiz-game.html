@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<title>Quiz</title>
+<head>
+
+    <style>
+        * {
+            overflow: hidden;
+        }
+
+        .main-container {
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .start-button {
+            background-color: yellow;
+            color: black;
+            height: 100px;
+            width: 390px;
+            margin: 300px;
+            border-radius: 20px;
+            font-size: x-large;
+        }
+
+        /* / display / */
+        .display {
+            width: 90%;
+            height: 200px;
+            margin-left: 5%;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .text-display {
+            font-size: 25px;
+            width: 90%;
+            margin-top: 70px;
+            height: 150px;
+            border-radius: 20px;
+            background-color: yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .button2 {
+            height: 60px;
+            width: 355px;
+            margin: 0px;
+            margin-left: 9.5%;
+            margin-top: 50px;
+            border-radius: 10px;
+            font-size: 15px;
+            background-color: rgb(75, 75, 75);
+            color: rgb(255, 255, 255);
+        }
+
+        .level {
+            background-color: yellow;
+            height: 80px;
+            width: 300px;
+            border-radius: 20px;
+            font-size: x-large;
+        }
+
+        .levelScreenPro {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .background {
+            background-color: yellow;
+            width: 1000px;
+            height: 470px;
+            margin: 50px;
+            margin-left: 200px;
+            border-radius: 30px;
+        }
+    </style>
+
+    <script>
+
+        let questionNumber = 0;
+
+        function questionOne() {
+
+            document.getElementById("text-display").innerHTML = "1. Who is the prime minister of india ?";
+            document.getElementById("answer-one").innerHTML = " A ) P. M. Modi ";
+            document.getElementById("answer-two").innerHTML = " B ) Dr. Rajnath Singh";
+            document.getElementById("answer-three").innerHTML = " C ) Bhagat Singh";
+            document.getElementById("answer-four").innerHTML = " D ) Gandhi ji";
+        }
+        function questionTwo() {
+            document.getElementById("text-display").innerHTML = "2. Who is the father of our nation ?";
+            document.getElementById("answer-one").innerHTML = "A ) Rabindra Nath Tagore";
+            document.getElementById("answer-two").innerHTML = "B ) Sardar Vallbh Bhai Patel";
+            document.getElementById("answer-three").innerHTML = "C ) Gandhi Ji";
+            document.getElementById("answer-four").innerHTML = "D ) Dr.Rajendra Prasad";
+        }
+        function questionThree() {
+            document.getElementById("text-display").innerHTML = "3. Who won the 2023 Men's Cricket World Cup ?";
+            document.getElementById("answer-one").innerHTML = "A ) India ";
+            document.getElementById("answer-two").innerHTML = "B ) Australia";
+            document.getElementById("answer-three").innerHTML = "C ) Pakistan";
+            document.getElementById("answer-four").innerHTML = "D ) Bangladesh";
+        }
+        function questionFour() {
+
+            document.getElementById("text-display").innerHTML = "1. When did the India got freedom";
+            document.getElementById("answer-one").innerHTML = " A ) 1947 ";
+            document.getElementById("answer-two").innerHTML = " B )  1949";
+            document.getElementById("answer-three").innerHTML = " C ) 1945";
+            document.getElementById("answer-four").innerHTML = " D ) 1923";
+        }
+        function questionFive() {
+
+            document.getElementById("text-display").innerHTML = "2. Who was the first prime minister of Indian ?";
+            document.getElementById("answer-one").innerHTML = " A ) P.m Modi";
+            document.getElementById("answer-two").innerHTML = " B )  Virat Kohli";
+            document.getElementById("answer-three").innerHTML = " C ) Mahatma Gandhi";
+            document.getElementById("answer-four").innerHTML = " D )  p. Jawaharlal Nehru";
+        }
+        function questionSix() {
+
+            document.getElementById("text-display").innerHTML = "3. Who was the first President of India ?";
+            document.getElementById("answer-one").innerHTML = " A ) Sardar Vallbh Bhai Patel";
+            document.getElementById("answer-two").innerHTML = " B ) P.m Modi ";
+            document.getElementById("answer-three").innerHTML = " C ) Dr. Rajendra Prasad";
+            document.getElementById("answer-four").innerHTML = " D )  p. Jawaharlal Nehru";
+        }
+        function questionSeven() {
+
+            document.getElementById("text-display").innerHTML = "1. Who heads the RBI ?";
+            document.getElementById("answer-one").innerHTML = " A ) Governor ";
+            document.getElementById("answer-two").innerHTML = " B )  Minister ";
+            document.getElementById("answer-three").innerHTML = " C ) Manager";
+            document.getElementById("answer-four").innerHTML = " D )  C.M";
+        }
+        function questionEight() {
+
+            document.getElementById("text-display").innerHTML = "2.Who created Bitcoin ?";
+            document.getElementById("answer-one").innerHTML = " A ) Warren Buffet";
+            document.getElementById("answer-two").innerHTML = " B )  Virat Kohli";
+            document.getElementById("answer-three").innerHTML = " C ) Satoshi Nakamoto";
+            document.getElementById("answer-four").innerHTML = " D )  Leo Tolstoy";
+        }
+        function questionNine() {
+
+            document.getElementById("text-display").innerHTML = "3. Which of the following is the strongest ?";
+            document.getElementById("answer-one").innerHTML = " A ) Kl Rahul";
+            document.getElementById("answer-two").innerHTML = " B )  Virat Kohli";
+            document.getElementById("answer-three").innerHTML = " C ) Sachin Tendulkar";
+            document.getElementById("answer-four").innerHTML = " D )  Dhoni";
+        }
+
+        function question(question) {
+            if (question == 1) {
+                questionNumber = 1;
+                questionOne();
+                document.getElementById("text-display").style.backgroundColor =
+                    "yellow";
+            } else if (question == 2) {
+                questionNumber = 2;
+                questionTwo();
+                document.getElementById("text-display").style.backgroundColor =
+                    "yellow";
+            } else if (question == 3) {
+                questionNumber = 3;
+                questionThree();
+                document.getElementById("text-display").style.backgroundColor =
+                    "yellow";
+            } else if (question == 4) {
+                questionNumber = 4;
+                questionFour();
+                document.getElementById("text-display").style.backgroundColor =
+                    "yellow";
+                document.getElementById("text-display").style.color =
+                    "black";
+            } else if (question == 5) {
+                questionNumber = 5;
+                questionFive();
+                document.getElementById("text-display").style.color =
+                    "black";
+                document.getElementById("text-display").style.backgroundColor =
+                    "yellow";
+            } else if (question == 6) {
+                questionNumber = 6;
+                questionSix();
+                document.getElementById("text-display").style.color =
+                    "black";
+                document.getElementById("text-display").style.backgroundColor =
+                    "yellow";
+            } else if (question == 7) {
+                questionNumber = 7;
+                questionSeven();
+                document.getElementById("text-display").style.color =
+                    "black";
+                document.getElementById("text-display").style.backgroundColor =
+                    "yellow";
+            } else if (question == 8) {
+                questionNumber = 8;
+                questionEight();
+                document.getElementById("text-display").style.color =
+                    "black";
+                document.getElementById("text-display").style.backgroundColor =
+                    "yellow";
+            } else if (question == 9) {
+                questionNumber = 9;
+                questionNine();
+                document.getElementById("text-display").style.color =
+                    "black";
+                document.getElementById("text-display").style.backgroundColor =
+                    "yellow";
+            }
+
+        }
+        function answer(givenAnswer) {
+            if (questionNumber == 1) {
+                if (givenAnswer == 1) {
+                    answerOne(true, 2);
+                } else {
+                    answerOne(false, 1)
+                }
+            } else if (questionNumber == 2) {
+                if (givenAnswer == 3) {
+                    answerOne(true, 3);
+                } else {
+                    answerOne(false, 1)
+                }
+            } else if (questionNumber == 3) {
+                if (givenAnswer == 2) {
+                    answerOne(true, 4);
+
+                } else {
+                    answerOne(false, 2)
+                }
+            } else if (questionNumber == 4) {
+                if (givenAnswer == 1) {
+                    answerOne(true, 5);
+                } else {
+                    answerOne(false, 4)
+                }
+            } else if (questionNumber == 5) {
+                if (givenAnswer == 4) {
+                    answerOne(true, 6);
+                } else {
+                    answerOne(false, 4)
+                }
+            } else if (questionNumber == 6) {
+                if (givenAnswer == 3) {
+                    answerOne(true, 7);
+                    document.getElementById("text-display").innerHTML =
+                        "Congratulations!you won...  Lets Move towards next level";
+                    document.getElementById("text-display").style.backgroundColor =
+                        "Gray";
+                    document.getElementById("text-display").style.color =
+                        "white";
+                } else {
+                    answerOne(false, 5)
+                }
+            } else if (questionNumber == 7) {
+                if (givenAnswer == 1) {
+                    answerOne(true, 8);
+                } else {
+                    answerOne(false, 7)
+                }
+            } else if (questionNumber == 8) {
+                if (givenAnswer == 3) {
+                    answerOne(true, 9);
+                } else {
+                    answerOne(false, 7)
+                }
+            } else if (questionNumber == 9) {
+                if (givenAnswer == 3) {
+                    answerOne(true, 9);
+                    document.getElementById("text-display").innerHTML =
+                        "Cngratulations YOU've Passed the Test";
+                    document.getElementById("text-display").style.backgroundColor =
+                        "Gray";
+                    document.getElementById("text-display").style.color =
+                        "white";
+                } else {
+                    answerOne(false, 8)
+                }
+            }
+        }
+        function answerOne(correctAnswer, nextQuestion) {
+            if (correctAnswer) {
+                document.getElementById("text-display").innerHTML =
+                    "Correct Answer";
+                document.getElementById("text-display").style.backgroundColor =
+                    "lightgreen";
+                
+                setTimeout(() => {
+                    question(nextQuestion);
+                }, 3000);
+
+            } else {
+                document.getElementById("text-display").innerHTML =
+                    "Wrong Answer"
+                document.getElementById("text-display").style.backgroundColor =
+                    "#FF0000";
+                document.getElementById("text-display").style.fontFamily =
+                    "sans-serif";
+                setTimeout(() => {
+                    startScreen();
+                }, 2000);
+            }
+        }
+        function dostart() {
+            document.getElementById("main-body").hidden = false;
+            document.getElementById("play-button").hidden = true;
+            levelScreen();
+        }
+
+        function startScreen() {
+            document.getElementById("main-body").hidden = true;
+            document.getElementById("play-button").hidden = false;
+
+        }
+
+        function level1() {
+            document.getElementById("second-body").hidden = false;
+            document.getElementById("level-1").hidden = false;
+            question(1);
+        }
+        function levelScreen() {
+            document.getElementById("second-body").hidden = false;
+            document.getElementById("level-1").hidden = false;
+        }
+        function level2() {
+            document.getElementById("second-body").hidden = false;
+            document.getElementById("level-1").hidden = false;
+            question(4);
+        }
+        function levelScreen() {
+            document.getElementById("second-body").hidden = true;
+            document.getElementById("level-1").hidden = false;
+        }
+        function level3() {
+            document.getElementById("second-body").hidden = false;
+            document.getElementById("level-1").hidden = false;
+            question(7);
+        }
+        function levelScreen() {
+            document.getElementById("second-body").hidden = true;
+            document.getElementById("level-1").hidden = false;
+        }
+    </script>
+
+</head>
+
+<body style="background-color: #135D66;">
+    <div class="button">
+        <button class="start-button" id="play-button" onclick="dostart()">LET"S START</button>
+    </div>
+    <!-- display -->
+    <div class="main-container" id="main-body" hidden="true">
+
+        <!-- levels -->
+        <div class="levelScreenPro">
+
+            <button id="level-1" class="level" onclick="level1()">Level 1.</button>
+            <button id="level-2" class="level" onclick="level2()">Level 2.</button>
+            <button id="level-3" class="level" onclick="level3()">Level 3.</button>
+
+        </div>
+        <hr>
+        <div id="second-body" hidden="true">
+            <div class="background">
+                <div class="display" id="container">
+                    <h1 id="text-display" class="text-display"></h1>
+                </div>
+                <!-- buttons -->
+                <div>
+                    <button class="button2" id="answer-one" onclick="answer(1)"></button>
+                    <button class="button2" id="answer-two" onclick="answer(2)"></button>
+                    <button class="button2" id="answer-three" onclick="answer(3)"></button>
+                    <button class="button2" id="answer-four" onclick="answer(4)"></button>
+                </div>
+            </div>
+            <div class="score-board">
+                <div class="gray" ></div>
+                <div class="green"></div>
+                <div class="red"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

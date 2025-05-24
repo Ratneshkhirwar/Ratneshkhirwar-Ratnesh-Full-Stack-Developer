@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        body{
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            background-color: white;
+            height: 370px;
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 20px;
+            margin-top: 100px;
+            padding-left: 30px;
+        }
+        h2{
+            font-weight: 100;
+            text-align: center;
+        }
+        h3{
+            font-weight: 100; 
+        }
+        input{
+            width: 350px;
+            margin-top: 10px;
+            height: 30px;
+            border-radius: 10px;
+            border: 2px solid rgb(207, 207, 207);
+        }
+        .find{
+            background: purple;
+            color: whitesmoke;
+            height: 40px;
+            width: 355px;
+            border-radius: 10px;
+            border: none;
+            font-size: large;
+        }
+        .find:hover{
+            transform: scale(1.02);
+            background-color: rgb(141, 0, 141);
+        }
+        .display{
+            font-size: 25px;
+            text-align: left;
+        }
+    </style>
+
+    <script>
+
+        function answer(){
+            let y = document.getElementById("input-one").value;
+            if(y <= 50){
+               let x = y * 2.0
+               document.getElementById("display").innerHTML = "Your Electricity bill is Rs." + x ;
+            }else if(y <= 100){
+                let x = y * 2.50
+               document.getElementById("display").innerHTML = "Your Electricity bill is Rs." + x ;
+            }else if(y <= 150){
+                let x = y * 2.75
+               document.getElementById("display").innerHTML = "Your Electricity bill is Rs." + x ;
+            }else if(y <= 250){
+                let x = y * 5.75
+               document.getElementById("display").innerHTML = "Your Electricity bill is Rs." + x ;
+            }else if(y <= 500){
+                let x = y * 6.30
+               document.getElementById("display").innerHTML = "Your Electricity bill is Rs." + x ;
+            }else{
+                let x = y * 7.10
+               document.getElementById("display").innerHTML = "Your Electricity bill is Rs." + x ;
+            }
+        }   
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h2>Electricity bill Calculator</h2><br>
+
+        <h3>Please enter your Unit below <br>
+            <input type="number" id="input-one">
+        </h3> 
+        
+        <button class="find" onclick="answer()">Find</button>
+        <br><br>
+        <div id="display" class="display"></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        * {
+            color: white;
+            background-color: rgb(36, 0, 70);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .box {
+            background-color: rgb(1, 1, 65);
+            height: 350px;
+            width: 240px;
+            border-radius: 20px;
+            float: left;
+            margin: 30px;
+        }
+
+        header {
+            background-color: blueviolet;
+            width: 95%;
+            height: 80px;
+            border-radius: 20px;
+        }
+
+        button {
+            background-color: rgb(65, 7, 132);
+            height: 40px;
+            width: 100px;
+            margin: 10px;
+            border-radius: 30px;
+            border-style: none;
+            transition: color 10s linear;
+        }
+
+        button:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+        .button {
+            width: 220px;
+            transition: color 10s linear;
+            margin: 0 10px;
+        }
+
+        .button:hover {
+            cursor: pointer;
+            transform: scale(1.03);
+        }
+
+        .div {
+            background-color: rgba(38, 0, 73, 0.556);
+            border-radius: 20px;
+            height: 200px;
+        }
+
+        .end {
+            height: 70px;
+            font-size: 25px;
+            width: 90%;
+            margin-left: 50px;
+            color: yellowgreen;
+            background: linear-gradient(100deg, rgb(0, 40, 133), red);
+        }
+
+        .end:hover {
+            cursor: pointer;
+            transform: scale(1.02);
+        }
+    </style>
+    <script>
+        let displayString = ""
+        function numbertype(passnumber) {
+            displayString = displayString + passnumber.toString();
+            document.getElementById("display").innerHTML = displayString;
+        }
+
+        let a = new Audio("Tu Hai Kahan-(PagalSongs.Com.IN).mp3");
+        let b = new Audio("Aarambh Hai Prachand.mp3");
+        let c = new Audio("Cheques - Shubh.mp3");
+        let d = new Audio("Elevated(PagalWorld.com.cm).mp3");
+        function music1() {
+            a.play();
+            b.pause();
+            c.pause();
+            d.pause();
+            numbertype("Tu hai kahan")
+        }
+        
+        function music1pause() {
+            a.pause();
+        }
+
+        function next1() {
+            music2()
+            a.pause();
+            b.play();
+        }
+
+        function music2() {
+            b.play();
+            c.pause();
+            d.pause();
+            a.pause();
+            document.getElementById("display1").innerHTML = " Arambha hai Prchand"
+        }
+        
+        function music2pause() {
+            b.pause();
+        }
+
+        function next2() {
+            music3()
+            b.pause();
+            c.play();
+        }
+        
+        function music3() {
+            c.play();
+            d.pause();
+            a.pause();
+            b.pause();
+            document.getElementById("display2").innerHTML = " Cheques"
+        }
+
+        function music3pause() {
+            c.pause();
+        }
+        
+        function next3() {
+            music4()
+            c.pause();
+            d.play();
+        }
+        
+        function music4() {
+            d.play();
+            b.pause();
+            c.pause();
+            a.pause();
+            document.getElementById("display3").innerHTML = " Elevated"
+        }
+        
+        function music4pause() {
+            d.pause();
+
+        }
+        
+        function next4() {
+            music1()
+            d.pause();
+            a.play();
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <header style="font-size: 40px;font-weight: 600;margin: 40px;text-align: center;">My Music player</header>
+    <h1 style="margin-left: 40px;">Recent media</h1>
+
+    <div>
+        <div class="box" style="font-size: x-small; text-align: center;">
+            <h1 style="background: none;">Tu Hai Kahan</h1>
+            <div style="background-color: blue;width: 190px;height: 150px;margin: 20px;border-radius: 20px;"><img
+                    style="width: 190px;height: 150px;border-radius: 20px;"
+                    src="https://i.ytimg.com/vi/AX6OrbgS8lI/sddefault.jpg"></div>
+            <div class="div"><button onclick="music1()">Play</button><button
+                    onclick="music1pause()">Pause</button><button onclick="next1()" class="button">Next</button></div>
+        </div>
+        <div class="box" style="font-size: x-small; text-align: center;">
+            <h1 style="background: none;">Arhambha hai prachand</h1>
+            <div style="background-color: blue;width: 190px;height: 150px;margin: 20px;border-radius: 20px;"><img
+                    style="width: 190px;height: 150px;border-radius: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoHIfTyW3c-daZVPLl3ryc0pndayfnixcXuA&s">
+            </div>
+            <div class="div"><button onclick="music2()">Play</button><button
+                    onclick="music2pause()">Pause</button><button onclick="next2()" class="button">Next</button></div>
+        </div>
+        <div class="box" style="font-size: x-small; text-align: center;">
+            <h1 style="background: none;">Cheques</h1>
+            <div style="background-color: blue;width: 190px;height: 150px;margin: 20px;border-radius: 20px;"><img
+                    style="width: 190px;height: 150px;border-radius: 20px;" src="https://c.saavncdn.com/704/Still-Rollin-Punjabi-2023-20230512121542-500x500.jpg"></div>
+            <div class="div"><button onclick="music3()">Play</button><button
+                    onclick="music3pause()">Pause</button><button onclick="next3()" class="button">Next</button></div>
+        </div>
+        <div class="box" style="font-size: x-small; text-align: center;">
+            <h1 style="background: none;">Elevated</h1>
+            <div style="background-color: blue;width: 190px;height: 150px;margin: 20px;border-radius: 20px;"><img
+                    style="width: 190px;height: 150px;border-radius: 20px;" src="https://i1.sndcdn.com/artworks-HS7phJ7mQEDOOuWp-spAEXQ-t500x500.jpg"></div>
+            <div class="div"><button onclick="music4()">Play</button><button
+                    onclick="music4pause()">Pause</button><button onclick="next4()" class="button">Next</button></div>
+        </div>
+    </div>
+    <div
+        style="background-color: rgba(55, 0, 255, 0.24);height: 380px;width: 250px;margin-left: 1250px;border-radius:30px;">
+        <h1 style="background: none;text-align: center;padding-top: 20px;color: rgb(197, 197, 235);">Play List <br></h1>
+        <div style="background:none;font-size: x-large;text-align: center;color: rgb(153, 153, 228);" id="display"><br>
+        </div><br>
+        <div style="background:none;font-size: x-large;text-align: center;color: rgb(153, 153, 228);" id="display1"><br>
+        </div><br>
+        <div style="background:none;font-size: x-large;text-align: center;color: rgb(153, 153, 228);" id="display2"><br>
+        </div><br>
+        <div style="background:none;font-size: x-large;text-align: center;color: rgb(153, 153, 228);" id="display3"><br>
+        </div>
+    </div>
+    <a href="./index.html" style="background: none;text-decoration: none;">
+        <button class="end">Click to Go back</button>
+    </a>
+
+</body>
+
+</html>

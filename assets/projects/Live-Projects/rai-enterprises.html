@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ray Enterprices</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+<style>
+    .navbar {
+        background-color: rgb(22, 69, 127) !important;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+    }
+
+    .navbar-one {
+        font-family: "Edu AU VIC WA NT Hand", cursive;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .main-background {
+        background: url(https://plus.unsplash.com/premium_photo-1676823553207-758c7a66e9bb?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cm9vbXxlbnwwfHwwfHx8MA%3D%3D) no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 0 !important;
+        height: 550px;
+    }
+
+    .img-items {
+        height: 160px;
+        width: 160px;
+        display: flex;
+        margin-left: 132px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img-items img {
+        height: 200px;
+    }
+
+    .blue-box {
+        background-color: rgba(22, 69, 127, 0.618);
+        height: 300px;
+        width: 300px;
+        position: absolute;
+        right: 0;
+        top: 450px;
+    }
+
+    @media(max-width:450px) {
+
+        .items {
+            width: 10rem;
+        }
+
+        .img-overlay {
+            display: flex;
+            flex-direction: column;
+            height: 100vh !important;
+        }
+
+        .iframe {
+            width: 325px;
+            margin-left: 10px !important;
+            margin-top: 770px !important;
+        }
+
+        .card-contact {
+            display: block !important;
+        }
+
+        .col-lg-6 {
+            text-align: left !important;
+            padding: 20px;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+
+        .y-circle-one {
+            height: 400px !important;
+            width: 400px !important;
+            font-size: 20px !important;
+            position: relative;
+            top: -55px;
+            padding: 60px !important;
+            padding-top: 80px !important;
+            left: -120px;
+        }
+
+        .y-circle-one div {
+            font-size: 16px !important;
+        }
+
+        .lead {
+            font-weight: 100 !important;
+        }
+
+        .lead br {
+            display: none;
+        }
+
+        .img-overlay {
+            height: 130vh !important;
+        }
+
+        .img-overlay img {
+            height: 300px !important;
+            margin: 10px !important;
+        }
+
+
+        .main-background {
+            height: auto;
+        }
+
+        .item {
+            display: block !important;
+            margin: 0 !important;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+
+        .item div {
+            margin-top: 10px !important;
+            margin: 0px !important;
+        }
+
+        .cement-comparison-section-div {
+            width: 415px !important;
+            margin-left: 0px !important;
+        }
+
+        .card {
+            margin-top: 10px !important;
+            margin-left: 5px !important;
+            width: auto !important;
+        }
+
+        .iron-bars{
+            height: 240vh !important;
+        }
+
+        .cement-comparison-section {
+            display: block !important;
+        }
+
+        .about-section {
+            padding: 10px;
+        }
+
+        .rounded-3-pro {
+            margin-top: 0px !important;
+            margin-left: 0px !important;
+            width: 100% !important;
+            box-sizing: border-box;
+            padding: 2rem !important;
+        }
+
+        .item {
+            width: 100vw !important;
+        }
+
+        .ck-c-one {
+            top: 393% !important;
+            right: 8% !important;
+        }
+
+        .ck-c-two {
+            top: 443% !important;
+            right: 5px !important;
+            height: auto !important;
+            width: 350px !important;
+        }
+
+        .ck-c-three {
+            position: absolute !important;
+            margin-left: 0 !important;
+            top: 530% !important;
+            right: 8% !important;
+        }
+    }
+
+    .item {
+        width: 80vw;
+        padding-top: 50px !important;
+    }
+
+    .card-contact {
+        display: flex;
+    }
+
+    .text-welcome-home {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .img-overlay {
+        background-color: rgba(22, 69, 127, 0.259);
+        z-index: 3;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        padding-left: 00px;
+        color: #e5e5e5;
+        align-items: center;
+        justify-content: space-evenly !important;
+    }
+
+    .img-overlay img {
+        height: 400px;
+        filter: saturate(.7);
+        border: 20px solid rgba(255, 255, 255, 0);
+        outline: 10px solid rgb(22, 69, 127)
+    }
+
+    .col-lg-6 {
+        background-color: rgba(22, 69, 127, 0.567);
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .items {
+        margin-top: 50px;
+        flex-wrap: nowrap;
+    }
+
+    .col-md-6 {
+        margin-left: 100px;
+    }
+
+    .text-bg-dark {
+        background-color: rgb(22, 69, 127) !important;
+    }
+
+    .perfect-plus-background {
+        position: relative;
+        top: -20px;
+    }
+
+    .perfect-plus-background img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .iron-bars {
+        height: 150vh;
+        padding: 50px;
+        background-color: rgb(22, 69, 127);
+    }
+
+    .y-circle-one {
+        background-color: #edcb50;
+        height: 700px;
+        width: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        text-align: center;
+        padding: 100px;
+        padding-top: 170px;
+        border-radius: 100%;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .y-circle-one div {
+        margin: 20px;
+        font-size: 30px;
+    }
+
+    /* From Uiverse.io by vinodjangid07 */
+    .cookieCard {
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(to right, rgb(137, 104, 255), rgb(175, 152, 255));
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px;
+        position: relative;
+    }
+
+
+    .cookieHeading {
+        font-size: 1.5em;
+        font-weight: 600;
+        color: rgb(241, 241, 241);
+        z-index: 2;
+    }
+
+    .cookieDescription {
+        font-size: 0.9em;
+        color: rgb(241, 241, 241);
+        z-index: 2;
+    }
+
+    .cookieDescription a {
+        color: rgb(241, 241, 241);
+    }
+
+    .acceptButton {
+        padding: 11px 20px;
+        background-color: #7b57ff;
+        transition-duration: .2s;
+        border: none;
+        color: rgb(241, 241, 241);
+        cursor: pointer;
+        font-weight: 600;
+        z-index: 2;
+    }
+
+    .acceptButton:hover {
+        background-color: #714aff;
+        transition-duration: .2s;
+    }
+
+    .ck-c-one {
+        position: absolute;
+        right: 5%;
+        top: 280%;
+    }
+
+    .ck-c-two {
+        position: absolute;
+        right: 23%;
+        top: 300%;
+        height: 500px;
+        width: 500px;
+    }
+
+    .ck-c-three {
+        position: relative;
+        top: -50px;
+        margin-left: 300px;
+    }
+
+    .cement-comparison-section {
+        margin: 0 !important;
+    }
+
+    .cement-comparison-section-div {
+        width: 600px !important;
+        margin-left: 100px;
+    }
+
+    .rounded-3-pro {
+        margin-top: 100px;
+        width: 90%;
+        margin-left: 100px;
+    }
+
+    .about-section {
+        background-color: rgb(22, 69, 127);
+        padding-top: 20px;
+        margin-top: 100px;
+        height: 120vh;
+    }
+</style>
+
+<body>
+
+    <nav class="navbar-one navbar-expand-lg bg-body-tertiary" style="background-color: #F6F5F5 !important;">
+        <div class="container-fluid" style="display: flex;justify-content: center;">Rai Enterprices
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 37%;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" style="color: white !important;" aria-current="page"
+                            href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#items" style="color: white !important;">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#importance" style="color: white !important;">Why to Choose us</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: white !important;" href="#contactUs">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary main-background">
+        <div class="img-overlay">
+            <div class="col-lg-6 px-0">
+                <h1 class="display-4 fst-italic">"Rai Enterprices"</h1>
+                <p class="lead my-3" style="font-weight: 500;">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <br>
+                    Esse aspernatur hic quos enim
+                    odio non, ullam incidunt est <br> maiores dolorem reiciendis quisquam cumque distinctio eaque <br>
+                    ratione
+                    commodi
+                    quidem magni? Inventore.
+                </p>
+            </div>
+            <div>
+                <img src="https://www.mpbirlacement.com/wp-content/uploads/2023/12/mpb-pop-up-main-1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="text-welcome-home" id="items">
+        Items
+    </div>
+    <div class="item" style="display: flex;">
+        <div class="col-md-6 ">
+            <div class="h-100 p-5 text-bg-dark rounded-3">
+                <h2>Cement</h2>
+                <p>Cement is a binding agent that is used to bind various construction materials. Given its
+                    adhesive and cohesive properties, it is an essential ingredient of concrete and mortar.
+                    Cement is mixed with water to form a paste that binds aggregates like sand or crushed rocks.</p>
+                <a href="./bootstrap(2).html">
+                    <button class="btn btn-outline-light" type="button">View the best</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+                <h2>Iron Bars</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, deserunt tenetur voluptatem culpa
+                    explicabo dicta porro aperiam facere ipsa veritatis sapiente non quae qui asperiores consectetur
+                    dolorem dignissimos saepe iste.
+                    Lorem ipsum dolor sit amet cons</p>
+                <a href="./bootstrap(2).html">
+                    <button class="btn btn-outline-secondary" type="button">View the best</button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary main-background"
+        style="height: 100px;margin-top: 100px;border-radius: 0px !important;">
+    </div>
+    <div class="perfect-plus-background">
+        <img src="https://www.mpbirlacement.com/wp-content/uploads/2023/09/BOLG-BANNER.jpg" alt="">
+    </div>
+
+    <div class="iron-bars">
+        <div class="y-circle-one" id="importance">
+            Famous and Experienced Cement Dealers
+            <div>
+                All types of Iron Bars <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste distinctio voluptatum aperiam eveniet
+
+            </div>
+        </div>
+        <div>
+            <div class="cookieCard ck-c-one">
+                <p class="cookieHeading">Cements</p>
+                <p class="cookieDescription">We have the best cement quality from others, In assosiation with MP Birla
+                    Group</p>
+                <a href="./bootstrap(2).html">
+                    <button class="acceptButton">View the best</button>
+                </a>
+            </div>
+            <div class="cookieCard ck-c-two">
+                <p class="cookieHeading">History</p>
+                <p class="cookieDescription">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis alias
+                    sapiente ipsum reiciendis iusto id placeat, molestias quas culpa minus, voluptatem officia possimus
+                    autem quo accusantium quia amet ratione numquam.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis vero alias sunt? Dolorem, minus
+                    consequatur, ipsa dicta dolores nihil expedita animi libero consequuntur beatae consectetur maxime
+                    voluptas et quas autem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, ipsam
+                    adipisci. Laboriosam, beatae sit commodi molestiae temporibus facere dignissimos quae nemo magnam
+                    dolorum eligendi nisi qui quasi nesciunt ea ipsum.</p>
+            </div>
+            <div class="cookieCard ck-c-three">
+                <p class="cookieHeading">Iron Bars</p>
+                <p class="cookieDescription">Selling the iron bars at best prices for 10+ years. Famous for the
+                    work of cement and Iron bars</p>
+                <a href="./bootstrap(2).html">
+                    <button class="acceptButton">View the best</button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 cement-comparison-section"
+        style="display: flex;justify-content: center;">
+        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"
+            style="background-color: rgb(22, 69, 127) !important;color: #fff;">
+            <div class="my-3 p-3">
+                <h2 class="display-5">Other Cement Bag</h2>
+                <p class="lead">And an even wittier subheading.</p>
+            </div>
+            <div class="bg-dark shadow-sm mx-auto"
+                style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;padding-top: 40px;">
+                <img src="./assest/LocalCementBag.png" height="250px" alt="">
+            </div>
+        </div>
+        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3">
+                <h2 class="display-5">Perfect plus Cement Bag</h2>
+                <p class="lead">And an even wittier subheading.</p>
+            </div>
+            <div class="bg-dark shadow-sm mx-auto"
+                style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;padding-top: 40px;">
+                <img src="./assest/P Cement.png" height="250px" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="about-section">
+        <div class="p-5 mb-4 bg-body-tertiary rounded-3 rounded-3-pro">
+            <div class="container-fluid py-5 ">
+                <h1 class="display-5 fw-bold">About us</h1>
+                <p class="col-md-8 fs-4">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem praesentium numquam sapiente error
+                    eum
+                    dolores ducimus, necessitatibus optio animi modi autem fuga deserunt reiciendis sed fugiat harum.
+                    Nesciunt, dolor in.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque reiciendis sit officiis quo
+                </p>
+            </div>
+        </div>
+        <div style="color: #fff;margin-top: 60px;font-size: 50px;text-align: center;" id="contactUs">Contact us</div>
+        <div class="card-contact" style="margin-top: 20px;">
+            <div class="card"
+                style="width: 24rem;margin-left: 100px;padding: 50px;text-align: center;margin-top: 50px;">
+                <div class="card-body" style="display: flex;justify-content: center;flex-direction: column;">
+                    <h5 class="card-title">Phone</h5>
+                    <p class="card-text">91+ ********** <br>91+ **********</p>
+                </div>
+            </div>
+            <div class="card"
+                style="width: 24rem;margin-left: 100px;padding: 50px;text-align: center;margin-top: 20px;">
+                <div class="card-body" style="display: flex;justify-content: center;flex-direction: column;">
+                    <h5 class="card-title">Address</h5>
+                    <p class="card-text">
+                        Near Basewar Complex, Ingale layout, Panchwati, Katol <br>
+                        441302
+                    </p>
+                </div>
+            </div>
+            <div class="card"
+                style="width: 24rem;padding: 50px; margin-left: 100px;text-align: center;margin-top: 50px;">
+                <div class="card-body" style="display: flex;justify-content: center;flex-direction: column;">
+                    <h5 class="card-title">Mail</h5>
+                    <p class="card-text">
+                        *******************
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex;justify-content: center;align-items: center;">
+        <iframe class="iframe"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d232.35947341803146!2d78.58198004808027!3d21.28129903846192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd457595b9b670f%3A0xe7fef9b038637899!2sBIRLA%20CEMENT!5e0!3m2!1sen!2sin!4v1723032012674!5m2!1sen!2sin"
+            width="1100" height="550" style="border:0;margin-top: 100px;margin-bottom: 50px;" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    <div
+        style="background-color: rgb(2, 37, 79);height: 100px;display: flex;align-items: center;justify-content: center;">
+        <div style="text-align: center;color: white;">
+            @ All rights reserved. Made by <a href="./index.html">@Ratnesh</a>
+        </div>
+    </div>
+</body>
+
+</html>
