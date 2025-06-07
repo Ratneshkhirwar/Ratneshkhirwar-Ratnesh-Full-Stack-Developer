@@ -9,6 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Fjalla+One&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Julee&family=Monoton&family=Questrial&display=swap"
         rel="stylesheet">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <title>Portfolio | Ratnesh Khirwar</title>
 </head>
@@ -196,8 +197,7 @@
                 <a href="./assets/projects/JS/keyboard.html">
                     <div class="card js">
                         <div class="card-image">
-                            <img src="./assets/images/keyboardlogo.png"
-                                alt="">
+                            <img src="./assets/images/keyboardlogo.png" alt="">
                         </div>
                         <div class="card-text">
                             <div class="card-title">Keyboard<span>🡢</span></div>
@@ -291,8 +291,7 @@
                 <a href="./assets/projects/JS/music-player.html">
                     <div class="card js">
                         <div class="card-image">
-                            <img src="./assets/images/MusicPlayerLogo.png"
-                                alt="">
+                            <img src="./assets/images/MusicPlayerLogo.png" alt="">
                         </div>
                         <div class="card-text">
                             <div class="card-title">Music Player<span>🡢</span></div>
@@ -424,42 +423,57 @@
     </section>
 
     <footer id="contact">
-        <div class="footer-child">
-            <div>Thank You,
-                <br> Ratnesh Khirwar
+        <div class="content-wrapper">
+            <div class="left-cont child">
+                <div class="child-two">
+                    <div class="logo">
+                        <i class='bx bx-location'></i>
+                    </div>
+                    <div>
+                        Ingale Layout · Panchwati · Katol
+                        <br />
+                        <span>
+                            Nagpur | Maharashtra | India
+                        </span>
+                    </div>
+                </div>
+
+                <div class="child-two">
+                    <div class="logo">
+                        <i class='bx bx-phone'></i>
+                    </div>
+                    <span>+91 12345 67890</span>
+                </div>
+
+                <div class="child-two">
+                    <div class="logo">
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                    <span>ratneshkhirwar00@gmail.com</span>
+                </div>
             </div>
-            <div class="footer-child-two">
-                <div>
-                    <a href="https://join.skype.com/invite/vL4e0F6gu3yU" target="_blank">
-                        <div>Skype</div>
-                    </a>
-                    <a href="https://discord.com/channels/@me" target="_blank">
-                        <div>Discord</div>
-                    </a>
-                    <a href="https://github.com/Ratneshkhirwar/Ratnesh-Khirwar_Full-Stack-Developer" target="_blank">
-                        <div>Git-Hub</div>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <div>Home</div>
-                    </a>
-                    <a href="#experience">
-                        <div>Experience</div>
-                    </a>
-                    <a href="#about">
-                        <div>About</div>
-                    </a>
-                    <a href="#projects">
-                        <div>Projects</div>
-                    </a>
-                </div>
+            <div class="right-cont child">
+                <div class="heading">Contact</div>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis quo assumenda temporibus commodi sed
+                aliquid odio accusantium perspiciatis et, sapiente harum cum animi culpa ullam voluptates maxime, aut,
+                illo facere?
             </div>
         </div>
-        <div class="footer-last-div">★ Made by Ratnesh ★ Powered by Enjoy Programming</div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Store the scroll position before unloading the page
+        window.addEventListener("beforeunload", () => {
+            localStorage.setItem("scrollY", window.scrollY);
+        });
+
+        // On page load, check if there's a stored scroll position and scroll to it
+        window.addEventListener("load", () => {
+            const scrollY = localStorage.getItem("scrollY");
+            if (scrollY) window.scrollTo(0, parseInt(scrollY));
+        });
+    </script>
 
 </body>
 
