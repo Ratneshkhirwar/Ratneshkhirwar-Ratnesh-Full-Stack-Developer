@@ -524,60 +524,64 @@ header nav ul li a {
     font-weight: 300;
 }
 
-
 footer {
-    height: 60vh;
     width: 100%;
+    background-color: #222222;
     color: #fff;
-    background-color: #222222;
+    padding: 50px;
 }
 
-footer img {
-    width: 100vw;
-    height: 50%;
-    object-fit: cover;
-}
-
-footer .footer-child {
-    height: 70%;
-    width: 100%;
+footer .content-wrapper {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    background-color: #222222;
 }
 
-footer .footer-child div {
-    height: 60%;
-    font-size: 2rem;
-    margin: 5px;
-}
-
-footer .footer-child .footer-child-two {
+footer .content-wrapper .child {
+    width: 40%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 400;
+    gap: 20px;
 }
 
-footer .footer-last-div {
-    font-size: 2rem;
-    width: 100vw;
-    height: 25%;
-    text-align: center;
+footer .content-wrapper .child span {
+    font-size: 1.3rem;
+}
+
+footer .content-wrapper .left-cont .child-two{
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .content-wrapper .left-cont .logo {
+    width: 50px;
+    height: 50px;
+    background-color: #414141;
+    border-radius: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #212121;
+    font-size: 20px;
 }
 
-footer a {
-    text-decoration: none;
-    transition: all .3s ease;
-    color: #fff;
+footer .content-wrapper .right-cont {
+    width: 40%;
+    display: flex;
+    font-size: 1.2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
-footer a:hover {
-    color: #3e3ed3;
+footer .content-wrapper .right-cont .heading {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 10px;    
 }
+
 
 @media screen and (max-width: 480px) {
     /* Styles for small phones */
